@@ -32,8 +32,11 @@ class item_fluency extends item
     // the item type
     public const ITEMTYPE = constants::TYPE_FLUENCY;
 
-    public function __construct($itemrecord, $moduleinstance = false, $context = false)
-    {
+    public function __construct(
+        $itemrecord,
+        $moduleinstance = false,
+        $context = false,
+    ) {
         parent::__construct($itemrecord, $moduleinstance, $context);
         $this->needs_speechrec = true;
     }
@@ -46,31 +49,36 @@ class item_fluency extends item
      */
     public function export_for_template(\renderer_base $output)
     {
-
         $testitem = parent::export_for_template($output);
         $testitem = $this->get_polly_options($testitem);
         $testitem = $this->set_layout($testitem);
 
         // Is rtl
         $testitem->rtl = utils::is_rtl($this->language);
-        $testitem->hintrtl = $this->itemrecord->{constants::FLUENCYHINTRTL} == 1;
+        $testitem->hintrtl =
+            $this->itemrecord->{constants::FLUENCYHINTRTL} == 1;
 
-        $testitem->readsentence = $this->itemrecord->{constants::READSENTENCE} == 1;
-        $testitem->allowretry = $this->itemrecord->{constants::GAPFILLALLOWRETRY} == 1;
-        $testitem->hidestartpage = $this->itemrecord->{constants::GAPFILLHIDESTARTPAGE} == 1;
+        $testitem->readsentence =
+            $this->itemrecord->{constants::READSENTENCE} == 1;
+        $testitem->allowretry =
+            $this->itemrecord->{constants::GAPFILLALLOWRETRY} == 1;
+        $testitem->hidestartpage =
+            $this->itemrecord->{constants::GAPFILLHIDESTARTPAGE} == 1;
 
         // Correct threshold.
-        $testitem->correctthreshold = (int) $this->itemrecord->{constants::FLUENCYCORRECTTHRESHOLD};
+        $testitem->correctthreshold =
+            (int) $this->itemrecord->{constants::FLUENCYCORRECTTHRESHOLD};
 
         //Hide Warning
-        $testitem->hidewarning = (int) $this->itemrecord->{constants::FLUENCY_HIDEWARNING};
+        $testitem->hidewarning =
+            (int) $this->itemrecord->{constants::FLUENCY_HIDEWARNING};
 
         // Cloud Poodll.
         $maxtime = 0;
         $testitem = $this->set_cloudpoodll_details($testitem, $maxtime);
         // In the case of Norwegian, we set the language to Norwegian Bokmal for speech recognition.
-        if ($testitem->language == 'no-NO') {
-            $testitem->language = 'nb-NO';
+        if ($testitem->language == "no-NO") {
+            $testitem->language = "nb-NO";
         }
 
         //add a few things to enable the saving of uploaded audio (on S3)
@@ -78,26 +86,44 @@ class item_fluency extends item
         $testitem->transcode = 1;
         $testitem->expiredays = 365;
 
-        // MS token and region.
-        $tokenobject = utils::fetch_msspeech_token($this->moduleinstance->region);
-        if ($tokenobject) {
-            $testitem->speechtoken = $tokenobject->token;
-            $testitem->speechtokenvalidseconds = $tokenobject->validseconds;
-            $testitem->speechtokentype = 'msspeech';
-        } else {
+        // Determine which ASR to use: custom (e.g. Cree wav2vec2) or MS Speech.
+        $mlconf = get_config(constants::M_COMPONENT);
+        $usecustomasr =
+            !empty($mlconf->customasrurl) &&
+            $this->language === constants::M_LANG_CRCA;
+
+        if ($usecustomasr) {
+            // Custom ASR – no token needed, URL is embedded via set_cloudpoodll_details.
             $testitem->speechtoken = false;
             $testitem->speechtokenvalidseconds = 0;
-            $testitem->speechtokentype = '';
+            $testitem->speechtokentype = "customasr";
+            $testitem->speechtokenregion = "";
+            $testitem->savemediaregion = $this->moduleinstance->region;
+        } else {
+            // MS token and region.
+            $tokenobject = utils::fetch_msspeech_token(
+                $this->moduleinstance->region,
+            );
+            if ($tokenobject) {
+                $testitem->speechtoken = $tokenobject->token;
+                $testitem->speechtokenvalidseconds = $tokenobject->validseconds;
+                $testitem->speechtokentype = "msspeech";
+            } else {
+                $testitem->speechtoken = false;
+                $testitem->speechtokenvalidseconds = 0;
+                $testitem->speechtokentype = "";
+            }
+            // We overwrite our regular poodll region with the MS region, eg useast1 becomes eastus, frankfurt becomes westeurope.
+            if ($tokenobject) {
+                $testitem->region = $tokenobject->region;
+                $testitem->speechtokenregion = $tokenobject->region;
+            }
+            $testitem->savemediaregion = $this->moduleinstance->region;
         }
-
-        // We overwrite our regular poodll region with the MS region, eg useast1 becomes eastus, frankfurt becomes westeurope.
-        $testitem->region = $tokenobject->region;
-        $testitem->speechtokenregion = $tokenobject->region;
-        $testitem->savemediaregion = $this->moduleinstance->region;
 
         // Build sentence objects.
         /* We do this right now so we get character level arrays. So  we can match mspeech per char results
-        ultimately we want to do this in a way that suits fluency rather than piggy back on sgapfill. */
+         ultimately we want to do this in a way that suits fluency rather than piggy back on sgapfill. */
         $sentences = [];
         if (isset($testitem->customtext1)) {
             $sentences = explode(PHP_EOL, $testitem->customtext1);
@@ -111,12 +137,15 @@ class item_fluency extends item
     public static function validate_import($newrecord, $cm)
     {
         $error = new \stdClass();
-        $error->col = '';
-        $error->message = '';
+        $error->col = "";
+        $error->message = "";
 
-        if ($newrecord->customtext1 == '') {
-            $error->col = 'customtext1';
-            $error->message = get_string('error:emptyfield', constants::M_COMPONENT);
+        if ($newrecord->customtext1 == "") {
+            $error->col = "customtext1";
+            $error->message = get_string(
+                "error:emptyfield",
+                constants::M_COMPONENT,
+            );
             return $error;
         }
 
@@ -125,43 +154,99 @@ class item_fluency extends item
     }
 
     /*
-    * This is for use with importing, telling import class each column's is, db col name, minilesson specific data type
-    */
+     * This is for use with importing, telling import class each column's is, db col name, minilesson specific data type
+     */
     public static function get_keycolumns()
     {
         // Get the basic key columns and customize a little for instances of this item type
         $keycols = parent::get_keycolumns();
-        $keycols['int4'] = ['jsonname' => 'promptvoiceopt', 'type' => 'voiceopts', 'optional' => true, 'default' => null, 'dbname' => constants::POLLYOPTION];
-        $keycols['text5'] = ['jsonname' => 'promptvoice', 'type' => 'voice', 'optional' => true, 'default' => null, 'dbname' => constants::POLLYVOICE];
-        $keycols['int3'] = ['jsonname' => 'correctthreshold', 'type' => 'int', 'optional' => true, 'default' => 0, 'dbname' => constants::FLUENCYCORRECTTHRESHOLD];
-        $keycols['text1'] = ['jsonname' => 'sentences', 'type' => 'stringarray', 'optional' => true, 'default' => [], 'dbname' => 'customtext1'];
-        $keycols['int5'] = ['jsonname' => 'hidestartpage', 'type' => 'boolean', 'optional' => true, 'default' => 0, 'dbname' => constants::GAPFILLHIDESTARTPAGE];
-        $keycols['int6'] = ['jsonname' => 'hidewarning', 'type' => 'boolean', 'optional' => true, 'default' => 0, 'dbname' => constants::FLUENCY_HIDEWARNING];
-        $keycols['int7'] = ['jsonname' => 'hintrtl', 'type' => 'boolean', 'optional' => true, 'default' => 0, 'dbname' => constants::FLUENCYHINTRTL];
-        $keycols['fileanswer_audio'] = ['jsonname' => constants::FILEANSWER . '1_audio', 'type' => 'anonymousfile', 'optional' => true, 'default' => null, 'dbname' => false];
-        $keycols['fileanswer_image'] = ['jsonname' => constants::FILEANSWER . '1_image', 'type' => 'anonymousfile', 'optional' => true, 'default' => null, 'dbname' => false];
+        $keycols["int4"] = [
+            "jsonname" => "promptvoiceopt",
+            "type" => "voiceopts",
+            "optional" => true,
+            "default" => null,
+            "dbname" => constants::POLLYOPTION,
+        ];
+        $keycols["text5"] = [
+            "jsonname" => "promptvoice",
+            "type" => "voice",
+            "optional" => true,
+            "default" => null,
+            "dbname" => constants::POLLYVOICE,
+        ];
+        $keycols["int3"] = [
+            "jsonname" => "correctthreshold",
+            "type" => "int",
+            "optional" => true,
+            "default" => 0,
+            "dbname" => constants::FLUENCYCORRECTTHRESHOLD,
+        ];
+        $keycols["text1"] = [
+            "jsonname" => "sentences",
+            "type" => "stringarray",
+            "optional" => true,
+            "default" => [],
+            "dbname" => "customtext1",
+        ];
+        $keycols["int5"] = [
+            "jsonname" => "hidestartpage",
+            "type" => "boolean",
+            "optional" => true,
+            "default" => 0,
+            "dbname" => constants::GAPFILLHIDESTARTPAGE,
+        ];
+        $keycols["int6"] = [
+            "jsonname" => "hidewarning",
+            "type" => "boolean",
+            "optional" => true,
+            "default" => 0,
+            "dbname" => constants::FLUENCY_HIDEWARNING,
+        ];
+        $keycols["int7"] = [
+            "jsonname" => "hintrtl",
+            "type" => "boolean",
+            "optional" => true,
+            "default" => 0,
+            "dbname" => constants::FLUENCYHINTRTL,
+        ];
+        $keycols["fileanswer_audio"] = [
+            "jsonname" => constants::FILEANSWER . "1_audio",
+            "type" => "anonymousfile",
+            "optional" => true,
+            "default" => null,
+            "dbname" => false,
+        ];
+        $keycols["fileanswer_image"] = [
+            "jsonname" => constants::FILEANSWER . "1_image",
+            "type" => "anonymousfile",
+            "optional" => true,
+            "default" => null,
+            "dbname" => false,
+        ];
         return $keycols;
     }
 
-     /*
+    /*
     This function return the prompt that the generate method requires.
     */
     public static function aigen_fetch_prompt($itemtemplate, $generatemethod)
     {
         switch ($generatemethod) {
-            case 'extract':
-                $prompt = "Extract a 1 dimensional array of 4 sentences from the following {language} text: [{text}]. ";
+            case "extract":
+                $prompt =
+                    "Extract a 1 dimensional array of 4 sentences from the following {language} text: [{text}]. ";
                 break;
 
-            case 'reuse':
+            case "reuse":
                 // This is a special case where we reuse the existing data, so we do not need a prompt.
                 // We don't call AI. So will just return an empty string.
                 $prompt = "";
                 break;
 
-            case 'generate':
+            case "generate":
             default:
-                $prompt = "Generate a 1 dimensional array of 4 sentences in {language} suitable for {level} level learners on the topic of: [{topic}] ";
+                $prompt =
+                    "Generate a 1 dimensional array of 4 sentences in {language} suitable for {level} level learners on the topic of: [{topic}] ";
                 break;
         }
         return $prompt;

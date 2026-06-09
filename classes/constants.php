@@ -23,32 +23,32 @@
 
 namespace mod_minilesson;
 
-defined('MOODLE_INTERNAL') || die();
+defined("MOODLE_INTERNAL") || die();
 
-class constants {
-
+class constants
+{
     // component name, db tables, things that define app
-    const M_COMPONENT = 'mod_minilesson';
+    const M_COMPONENT = "mod_minilesson";
 
     const M_DEFAULT_CLOUDPOODLL = "cloud.poodll.com";
-    const M_FILEAREA_SUBMISSIONS = 'submission';
-    const M_TABLE = 'minilesson';
-    const M_ATTEMPTSTABLE = 'minilesson_attempt';
-    const M_AITABLE = 'minilesson_ai_result';
-    const M_QTABLE = 'minilesson_rsquestions';
-    const M_AUTHTABLE = 'minilesson_auth';
-    const M_CORRECTPHONES_TABLE = 'minilesson_correctphones';
-    const M_MODNAME = 'minilesson';
-    const M_URL = '/mod/minilesson';
-    const M_PATH = '/mod/minilesson';
-    const M_CLASS = 'mod_minilesson';
-    const M_PLUGINSETTINGS = '/admin/settings.php?section=modsettingminilesson';
+    const M_FILEAREA_SUBMISSIONS = "submission";
+    const M_TABLE = "minilesson";
+    const M_ATTEMPTSTABLE = "minilesson_attempt";
+    const M_AITABLE = "minilesson_ai_result";
+    const M_QTABLE = "minilesson_rsquestions";
+    const M_AUTHTABLE = "minilesson_auth";
+    const M_CORRECTPHONES_TABLE = "minilesson_correctphones";
+    const M_MODNAME = "minilesson";
+    const M_URL = "/mod/minilesson";
+    const M_PATH = "/mod/minilesson";
+    const M_CLASS = "mod_minilesson";
+    const M_PLUGINSETTINGS = "/admin/settings.php?section=modsettingminilesson";
     const M_STATE_COMPLETE = 1;
     const M_STATE_INCOMPLETE = 0;
 
-    const M_NOITEMS_CONT = 'mod_minilesson_noitems_cont';
-    const M_ITEMS_CONT = 'mod_minilesson_items_cont';
-    const M_ITEMS_TABLE = 'mod_minilesson_qpanel';
+    const M_NOITEMS_CONT = "mod_minilesson_noitems_cont";
+    const M_ITEMS_CONT = "mod_minilesson_items_cont";
+    const M_ITEMS_TABLE = "mod_minilesson_qpanel";
 
     const M_USE_DATATABLES = 0;
     const M_USE_PAGEDTABLES = 1;
@@ -97,7 +97,6 @@ class constants {
         "Lisa",
     ];
 
-
     // grading options
     const M_GRADEHIGHEST = 0;
     const M_GRADELOWEST = 1;
@@ -119,160 +118,164 @@ class constants {
     const RELEVANCETYPE_MODELANSWER = 2;
     // Constants for RS Questions
     const NONE = 0;
-    const TYPE_TEXTPROMPT_LONG = 'multichoicelong';
+    const TYPE_TEXTPROMPT_LONG = "multichoicelong";
 
-    const TYPE_MULTIAUDIO = 'multiaudio';
-    const TYPE_MULTICHOICE = 'multichoice';
-    const TYPE_PAGE = 'page';
-    const TYPE_DICTATIONCHAT = 'dictationchat';
-    const TYPE_LGAPFILL = 'listeninggapfill';
-    const TYPE_TGAPFILL = 'typinggapfill';
-    const LGAPFILL_ENABLEVKEYBOARD = 'customtext6';
-    const LGAPFILL_CUSTOMKEYS = 'customtext7';
-    const TGAPFILL_ENABLEVKEYBOARD = 'customtext6';
-    const TGAPFILL_CUSTOMKEYS = 'customtext7';
-    const TYPE_SGAPFILL = 'speakinggapfill';
-    const TYPE_PGAPFILL = 'passagegapfill';
-    const TYPE_COMPQUIZ = 'comprehensionquiz';
-    const TYPE_H5P = 'h5p';
-    const TYPE_DICTATION = 'dictation';
-    const TYPE_SPEECHCARDS = 'speechcards';
-    const TYPE_LISTENREPEAT = 'listenrepeat';
-    const TYPE_SMARTFRAME = 'smartframe';
-    const TYPE_SHORTANSWER = 'shortanswer';
-    const TYPE_SPACEGAME = 'spacegame';
-    const TYPE_FREEWRITING = 'freewriting';
-    const TYPE_FREESPEAKING = 'freespeaking';
-    const TYPE_FLUENCY = 'fluency';
-    const TYPE_PASSAGEREADING = 'passagereading';
-    const TYPE_CONVERSATION = 'conversation';
-    const TYPE_AUDIOCHAT = 'audiochat';
-    const TYPE_WORDSHUFFLE = 'wordshuffle';
-    const TYPE_SCATTER = 'scatter';
-    const TYPE_SLIDES = 'slides';
-    const TYPE_FICTION = 'fiction';
-    const AUDIOSTORYMETA = 'itemaudiofname';
-    const AUDIOSTORYZOOMANDPAN = 'itemaudiostoryzoom';
+    const TYPE_MULTIAUDIO = "multiaudio";
+    const TYPE_MULTICHOICE = "multichoice";
+    const TYPE_PAGE = "page";
+    const TYPE_DICTATIONCHAT = "dictationchat";
+    const TYPE_LGAPFILL = "listeninggapfill";
+    const TYPE_TGAPFILL = "typinggapfill";
+    const LGAPFILL_ENABLEVKEYBOARD = "customtext6";
+    const LGAPFILL_CUSTOMKEYS = "customtext7";
+    const TGAPFILL_ENABLEVKEYBOARD = "customtext6";
+    const TGAPFILL_CUSTOMKEYS = "customtext7";
+    const TYPE_SGAPFILL = "speakinggapfill";
+    const TYPE_PGAPFILL = "passagegapfill";
+    const TYPE_COMPQUIZ = "comprehensionquiz";
+    const TYPE_H5P = "h5p";
+    const TYPE_DICTATION = "dictation";
+    const TYPE_SPEECHCARDS = "speechcards";
+    const TYPE_LISTENREPEAT = "listenrepeat";
+    const TYPE_SMARTFRAME = "smartframe";
+    const TYPE_SHORTANSWER = "shortanswer";
+    const TYPE_SPACEGAME = "spacegame";
+    const TYPE_FREEWRITING = "freewriting";
+    const TYPE_FREESPEAKING = "freespeaking";
+    const TYPE_FLUENCY = "fluency";
+    const TYPE_PASSAGEREADING = "passagereading";
+    const TYPE_CONVERSATION = "conversation";
+    const TYPE_AUDIOCHAT = "audiochat";
+    const TYPE_WORDSHUFFLE = "wordshuffle";
+    const TYPE_SCATTER = "scatter";
+    const TYPE_SLIDES = "slides";
+    const TYPE_FICTION = "fiction";
+    const AUDIOSTORYMETA = "itemaudiofname";
+    const AUDIOSTORYZOOMANDPAN = "itemaudiostoryzoom";
     const ZOOMANDPAN_NONE = 0;
     const ZOOMANDPAN_LITE = 1;
     const ZOOMANDPAN_MEDIUM = 2;
     const ZOOMANDPAN_MORE = 3;
-    const AUDIOPROMPT = 'audioitem';
-    const AUDIOANSWER = 'audioanswer';
-    const AUDIOMODEL = 'audiomodel';
-    const CORRECTANSWER = 'correctanswer';
-    const AUDIOPROMPT_FILEAREA = 'audioitem';
-    const TEXTPROMPT_FILEAREA = 'textitem';
-    const TEXTQUESTION = 'itemtext';
-    const TEXTINSTRUCTIONS = 'iteminstructions';
-    const TEXTQUESTION_FORMAT = 'itemtextformat';
-    const TTSQUESTION = 'itemtts';
-    const TTSQUESTIONVOICE = 'itemttsvoice';
-    const TTSQUESTIONOPTION = 'itemttsoption';
-    const TTSAUTOPLAY = 'itemttsautoplay';
-    const TTSDIALOG = 'itemttsdialog';
-    const TTSPASSAGE = 'itemttspassage';
-    const NATIVELANGCHOOSER = 'itemnativelangchooser';
-    const AUDIOSTORY = 'itemaudiostory';
-    const AUDIOSTORYTIMES = 'itemaudiostorytimes';
-    const TTSDIALOGOPTS = 'itemttsdialogopts';
-    const TTSPASSAGEOPTS = 'itemttspassageopts';
+    const AUDIOPROMPT = "audioitem";
+    const AUDIOANSWER = "audioanswer";
+    const AUDIOMODEL = "audiomodel";
+    const CORRECTANSWER = "correctanswer";
+    const AUDIOPROMPT_FILEAREA = "audioitem";
+    const TEXTPROMPT_FILEAREA = "textitem";
+    const TEXTQUESTION = "itemtext";
+    const TEXTINSTRUCTIONS = "iteminstructions";
+    const TEXTQUESTION_FORMAT = "itemtextformat";
+    const TTSQUESTION = "itemtts";
+    const TTSQUESTIONVOICE = "itemttsvoice";
+    const TTSQUESTIONOPTION = "itemttsoption";
+    const TTSAUTOPLAY = "itemttsautoplay";
+    const TTSDIALOG = "itemttsdialog";
+    const TTSPASSAGE = "itemttspassage";
+    const NATIVELANGCHOOSER = "itemnativelangchooser";
+    const AUDIOSTORY = "itemaudiostory";
+    const AUDIOSTORYTIMES = "itemaudiostorytimes";
+    const TTSDIALOGOPTS = "itemttsdialogopts";
+    const TTSPASSAGEOPTS = "itemttspassageopts";
 
-    const TTSDIALOGVOICEA = 'itemttsdialogvoicea';
-    const TTSDIALOGVOICEB = 'itemttsdialogvoiceb';
-    const TTSDIALOGVOICEC = 'itemttsdialogvoicec';
-    const TTSDIALOGVISIBLE = 'itemttsdialogvisible';
-    const TTSPASSAGEVOICE = 'itemttspassagevoice';
-    const TTSPASSAGESPEED = 'itemttspassagespeed';
+    const TTSDIALOGVOICEA = "itemttsdialogvoicea";
+    const TTSDIALOGVOICEB = "itemttsdialogvoiceb";
+    const TTSDIALOGVOICEC = "itemttsdialogvoicec";
+    const TTSDIALOGVISIBLE = "itemttsdialogvisible";
+    const TTSPASSAGEVOICE = "itemttspassagevoice";
+    const TTSPASSAGESPEED = "itemttspassagespeed";
 
-    const MEDIAQUESTION = 'itemmedia';
-    const QUESTIONTEXTAREA = 'itemtextarea';
-    const YTVIDEOID = 'itemytid';
-    const YTVIDEOSTART = 'itemytstart';
-    const YTVIDEOEND = 'itemytend';
-    const MEDIAIFRAME = 'customdata5';
-    const TEXTANSWER = 'customtext';
-    const FILEANSWER = 'customfile';
-    const H5PFILE = 'customfile1';
-    const SLIDESFILES = 'customfile1';
-    const FICTIONFILES = 'customfile1';
-    const CUSTOMDATA = 'customdata';
-    const CUSTOMINT = 'customint';
-    const POLLYVOICE = 'customtext5';
-    const POLLYOPTION = 'customint4';
-    const CONFIRMCHOICE = 'customint3';
-    const AIGRADE_INSTRUCTIONS = 'customtext6';
+    const MEDIAQUESTION = "itemmedia";
+    const QUESTIONTEXTAREA = "itemtextarea";
+    const YTVIDEOID = "itemytid";
+    const YTVIDEOSTART = "itemytstart";
+    const YTVIDEOEND = "itemytend";
+    const MEDIAIFRAME = "customdata5";
+    const TEXTANSWER = "customtext";
+    const FILEANSWER = "customfile";
+    const H5PFILE = "customfile1";
+    const SLIDESFILES = "customfile1";
+    const FICTIONFILES = "customfile1";
+    const CUSTOMDATA = "customdata";
+    const CUSTOMINT = "customint";
+    const POLLYVOICE = "customtext5";
+    const POLLYOPTION = "customint4";
+    const CONFIRMCHOICE = "customint3";
+    const AIGRADE_INSTRUCTIONS = "customtext6";
 
-    const AIGRADE_FEEDBACK = 'customtext2';
-    const AIGRADE_FEEDBACK_LANGUAGE = 'customtext4';
-    const AIGRADE_MODELANSWER = 'customtext3';
-    const AUDIOCHAT_INSTRUCTIONS = 'customtext6';
-    const AUDIOCHAT_FEEDBACKINSTRUCTIONS = 'customdata3';
-    const AUDIOCHAT_ROLE = 'customtext2';
-    const AUDIOCHAT_VOICE = 'customtext3';
-    const AUDIOCHAT_NATIVE_LANGUAGE = 'customtext4';
-    const AUDIOCHAT_TOPIC = 'customtext5';
-    const AUDIOCHAT_AIDATA1  = 'customdata1';
-    const AUDIOCHAT_AIDATA2  = 'customdata2';
-    const AUDIOCHAT_AUTORESPONSE = 'customint4';
+    const AIGRADE_FEEDBACK = "customtext2";
+    const AIGRADE_FEEDBACK_LANGUAGE = "customtext4";
+    const AIGRADE_MODELANSWER = "customtext3";
+    const AUDIOCHAT_INSTRUCTIONS = "customtext6";
+    const AUDIOCHAT_FEEDBACKINSTRUCTIONS = "customdata3";
+    const AUDIOCHAT_ROLE = "customtext2";
+    const AUDIOCHAT_VOICE = "customtext3";
+    const AUDIOCHAT_NATIVE_LANGUAGE = "customtext4";
+    const AUDIOCHAT_TOPIC = "customtext5";
+    const AUDIOCHAT_AIDATA1 = "customdata1";
+    const AUDIOCHAT_AIDATA2 = "customdata2";
+    const AUDIOCHAT_AUTORESPONSE = "customint4";
 
-    const SLIDES_MARKDOWN = 'customtext1';
-    const SLIDES_FULLSCREEN = 'customint1';
+    const SLIDES_MARKDOWN = "customtext1";
+    const SLIDES_FULLSCREEN = "customint1";
 
     const SLIDES_MARKDOWN_DEFAULT = "# Slide 1 Title\n\nYour content here. Use markdown syntax to format text and add images.\n\n---\n\n# Slide 2 Title\n\nMore content here. You can add as many slides as you need.\n";
-    const FICTION_YARN = 'customtext1';
+    const FICTION_YARN = "customtext1";
     const FICTION_YARN_DEFAULT = "title: Start\n---\nNarrator: We're going to go on an adventure!\n\n<<jump Cave>>\n===\n\ntitle: Cave\n---\nNarrator: Let's look inside the spooky cave...\n<<jump theend>>\n===\n\ntitle: theend\n---\nNarrator: The end...\n===";
-    const FICTION_PRESENTATION_MODE = 'customint1';
-    const FICTION_FLOWTHROUGH_MESSAGES = 'customint2';
-    const FICTION_SHOW_NONOPTIONS = 'customint3';
-    const AUDIOCHAT_ALLOWRETRY  = 'customint5';
-    const READINGPASSAGE = 'customtext1';
-    const PASSAGEGAPFILL_PASSAGE = 'customtext1';
-    const PASSAGEGAPFILL_HINTS = 'customint5';
-    const PENALIZEHINTS = 'customint2';
-    const GAPFILLHINTRTL = 'customint6';
-    const WORDSHUFFLEHINTRTL = 'customint6';
-    const SCATTERHINTRTL = 'customint6';
-    const FLUENCYHINTRTL = 'customint7';
-    const ALTERNATES = 'customtext2';
-    const TARGETWORDCOUNT = 'customint3';
-    const TOTALMARKS = 'customint1';
-    const TEXTQUESTION_FILEAREA = 'itemarea';
-    const TEXTANSWER_FILEAREA = 'customtextfilearea';
-    const PASSAGEPICTURE = 'passagepicture';
-    const PASSAGEPICTURE_FILEAREA = 'passagepicture';
-    const TIMELIMIT = 'timelimit';
-    const GAPFILLALLOWRETRY = 'customint3';
-    const FLUENCYCORRECTTHRESHOLD = 'customint3';
-    const FLUENCY_HIDEWARNING = 'customint6';
-    const NOPASTING = 'customint4';
-    const GAPFILLHIDESTARTPAGE = 'customint5';
-    const WORDSHUFFLEHIDESTARTPAGE = 'customint5';
-    const SG_INCLUDEMATCHING = 'customint3';
-    const SG_ALIENCOUNT_MULTICHOICE = 'customint1';
-    const SG_ALIENCOUNT_MATCHING = 'customint2';
-    const SG_ALLOWRETRY = 'customint4';
+    const FICTION_PRESENTATION_MODE = "customint1";
+    const FICTION_FLOWTHROUGH_MESSAGES = "customint2";
+    const FICTION_SHOW_NONOPTIONS = "customint3";
+    const AUDIOCHAT_ALLOWRETRY = "customint5";
+    const READINGPASSAGE = "customtext1";
+    const PASSAGEGAPFILL_PASSAGE = "customtext1";
+    const PASSAGEGAPFILL_HINTS = "customint5";
+    const PENALIZEHINTS = "customint2";
+    const GAPFILLHINTRTL = "customint6";
+    const WORDSHUFFLEHINTRTL = "customint6";
+    const SCATTERHINTRTL = "customint6";
+    const FLUENCYHINTRTL = "customint7";
+    const ALTERNATES = "customtext2";
+    const TARGETWORDCOUNT = "customint3";
+    const TOTALMARKS = "customint1";
+    const TEXTQUESTION_FILEAREA = "itemarea";
+    const TEXTANSWER_FILEAREA = "customtextfilearea";
+    const PASSAGEPICTURE = "passagepicture";
+    const PASSAGEPICTURE_FILEAREA = "passagepicture";
+    const TIMELIMIT = "timelimit";
+    const GAPFILLALLOWRETRY = "customint3";
+    const FLUENCYCORRECTTHRESHOLD = "customint3";
+    const FLUENCY_HIDEWARNING = "customint6";
+    const NOPASTING = "customint4";
+    const GAPFILLHIDESTARTPAGE = "customint5";
+    const WORDSHUFFLEHIDESTARTPAGE = "customint5";
+    const SG_INCLUDEMATCHING = "customint3";
+    const SG_ALIENCOUNT_MULTICHOICE = "customint1";
+    const SG_ALIENCOUNT_MATCHING = "customint2";
+    const SG_ALLOWRETRY = "customint4";
 
-    const SCATTER_ALLOWRETRY = 'customint4';
+    const SCATTER_ALLOWRETRY = "customint4";
     const MAXANSWERS = 4;
     const MAXCUSTOMTEXT = 7;
     const MAXCUSTOMDATA = 5;
     const MAXCUSTOMINT = 9;
 
-    const ITEMTEXTAREA_EDOPTIONS = ['trusttext' => 0, 'noclean' => 1, 'maxfiles' => 0];
-    const READSENTENCE = 'customint2';
-    const IGNOREPUNCTUATION = 'customint2';
-    const SHOWTEXTPROMPT = 'customint1';
+    const ITEMTEXTAREA_EDOPTIONS = [
+        "trusttext" => 0,
+        "noclean" => 1,
+        "maxfiles" => 0,
+    ];
+    const READSENTENCE = "customint2";
+    const IGNOREPUNCTUATION = "customint2";
+    const SHOWTEXTPROMPT = "customint1";
     const TEXTPROMPT_WORDS = 1;
     const TEXTPROMPT_DOTS = 0;
 
-    const LISTENORREAD = 'customint2';
+    const LISTENORREAD = "customint2";
     const LISTENORREAD_READ = 0;
     const LISTENORREAD_LISTEN = 1;
     const LISTENORREAD_LISTENANDREAD = 2;
     const LISTENORREAD_IMAGE = 3;
 
-    const LAYOUT = 'layout';
+    const LAYOUT = "layout";
     const LAYOUT_AUTO = 0;
     const LAYOUT_HORIZONTAL = 1;
     const LAYOUT_VERTICAL = 2;
@@ -285,268 +288,457 @@ class constants {
     const TTS_NOTTS = 4;
 
     const ALL_VOICES_NINGXIA = [
-        self::M_LANG_ARAE => ['Hala' => 'Hala', 'Zayd' => 'Zayd'],
-        self::M_LANG_ARSA => ['Zeina' => 'Zeina', 'ar-XA-Wavenet-B' => 'Amir_g', 'ar-XA-Wavenet-A' => 'Salma_g', 'ar-MA-Azure-JamalNeural' => 'Jamal_a', 'ar-MA-Azure-MounaNeural' => 'Mouna_a'],
-        self::M_LANG_ZHCN => ['Zhiyu' => 'Zhiyu'],
-        self::M_LANG_DADK => ['Naja' => 'Naja', 'Mads' => 'Mads'],
-        self::M_LANG_NLNL => ["Ruben" => "Ruben", "Lotte" => "Lotte", "Laura" => "Laura"],
+        self::M_LANG_ARAE => ["Hala" => "Hala", "Zayd" => "Zayd"],
+        self::M_LANG_ARSA => [
+            "Zeina" => "Zeina",
+            "ar-XA-Wavenet-B" => "Amir_g",
+            "ar-XA-Wavenet-A" => "Salma_g",
+            "ar-MA-Azure-JamalNeural" => "Jamal_a",
+            "ar-MA-Azure-MounaNeural" => "Mouna_a",
+        ],
+        self::M_LANG_ZHCN => ["Zhiyu" => "Zhiyu"],
+        self::M_LANG_DADK => ["Naja" => "Naja", "Mads" => "Mads"],
+        self::M_LANG_NLNL => [
+            "Ruben" => "Ruben",
+            "Lotte" => "Lotte",
+            "Laura" => "Laura",
+        ],
         self::M_LANG_NLBE => ["Lisa" => "Lisa"],
         self::M_LANG_ENUS => [
-            'Joey' => 'Joey',
-            'Justin' => 'Justin',
-            'Matthew' => 'Matthew',
-            'en-US-LemonFox-puck' => 'Puck',
-            'Ivy' => 'Ivy',
-            'Joanna' => 'Joanna',
-            'Kendra' => 'Kendra',
-            'Kimberly' => 'Kimberly',
-            'Salli' => 'Salli',
-            'en-US-LemonFox-nova' => 'Tiffany',
+            "Joey" => "Joey",
+            "Justin" => "Justin",
+            "Matthew" => "Matthew",
+            "en-US-LemonFox-puck" => "Puck",
+            "Ivy" => "Ivy",
+            "Joanna" => "Joanna",
+            "Kendra" => "Kendra",
+            "Kimberly" => "Kimberly",
+            "Salli" => "Salli",
+            "en-US-LemonFox-nova" => "Tiffany",
         ],
-        self::M_LANG_ENGB => ['Brian' => 'Brian', 'Amy' => 'Amy', 'Emma' => 'Emma'],
-        self::M_LANG_ENAU => ['Russell' => 'Russell', 'Nicole' => 'Nicole'],
-        self::M_LANG_ENIN => ['Aditi' => 'Aditi', 'Raveena' => 'Raveena'],
+        self::M_LANG_ENGB => [
+            "Brian" => "Brian",
+            "Amy" => "Amy",
+            "Emma" => "Emma",
+        ],
+        self::M_LANG_ENAU => ["Russell" => "Russell", "Nicole" => "Nicole"],
+        self::M_LANG_ENIN => ["Aditi" => "Aditi", "Raveena" => "Raveena"],
         self::M_LANG_ENWL => ["Geraint" => "Geraint"],
-        self::M_LANG_FIFI => ['Suvi' => 'Suvi'],
-        self::M_LANG_FRCA => ['Chantal' => 'Chantal'],
-        self::M_LANG_FRFR => ['Mathieu' => 'Mathieu', 'Celine' => 'Celine', 'Lea' => 'Lea'],
-        self::M_LANG_DEDE => ['Hans' => 'Hans', 'Marlene' => 'Marlene', 'Vicki' => 'Vicki'],
-        self::M_LANG_DEAT => ['Hannah' => 'Hannah'],
+        self::M_LANG_FIFI => ["Suvi" => "Suvi"],
+        self::M_LANG_FRCA => ["Chantal" => "Chantal"],
+        self::M_LANG_FRFR => [
+            "Mathieu" => "Mathieu",
+            "Celine" => "Celine",
+            "Lea" => "Lea",
+        ],
+        self::M_LANG_DEDE => [
+            "Hans" => "Hans",
+            "Marlene" => "Marlene",
+            "Vicki" => "Vicki",
+        ],
+        self::M_LANG_DEAT => ["Hannah" => "Hannah"],
         self::M_LANG_HIIN => ["Aditi" => "Aditi"],
-        self::M_LANG_ISIS => ['Dora' => 'Dora', 'Karl' => 'Karl'],
-        self::M_LANG_ITIT => ['Carla' => 'Carla', 'Bianca' => 'Bianca', 'Giorgio' => 'Giorgio'],
-        self::M_LANG_JAJP => ['Takumi' => 'Takumi', 'Mizuki' => 'Mizuki'],
-        self::M_LANG_KOKR => ['Seoyeon' => 'Seoyeon'],
-        self::M_LANG_NONO => ['Liv' => 'Liv'],
-        self::M_LANG_PSAF => ['ps-AF-Azure-GulNawazNeural' => 'GulNawaz_a', 'ps-AF-Azure-LatifaNeural' => 'Latifa_a'],
-        self::M_LANG_PLPL => ['Ewa' => 'Ewa', 'Maja' => 'Maja', 'Jacek' => 'Jacek', 'Jan' => 'Jan'],
-        self::M_LANG_PTBR => ['Ricardo' => 'Ricardo', 'Vitoria' => 'Vitoria', 'Camila' => 'Camila'],
-        self::M_LANG_PTPT => ["Ines" => "Ines", 'Cristiano' => 'Cristiano'],
-        self::M_LANG_RORO => ['Carmen' => 'Carmen'],
+        self::M_LANG_ISIS => ["Dora" => "Dora", "Karl" => "Karl"],
+        self::M_LANG_ITIT => [
+            "Carla" => "Carla",
+            "Bianca" => "Bianca",
+            "Giorgio" => "Giorgio",
+        ],
+        self::M_LANG_JAJP => ["Takumi" => "Takumi", "Mizuki" => "Mizuki"],
+        self::M_LANG_KOKR => ["Seoyeon" => "Seoyeon"],
+        self::M_LANG_NONO => ["Liv" => "Liv"],
+        self::M_LANG_PSAF => [
+            "ps-AF-Azure-GulNawazNeural" => "GulNawaz_a",
+            "ps-AF-Azure-LatifaNeural" => "Latifa_a",
+        ],
+        self::M_LANG_PLPL => [
+            "Ewa" => "Ewa",
+            "Maja" => "Maja",
+            "Jacek" => "Jacek",
+            "Jan" => "Jan",
+        ],
+        self::M_LANG_PTBR => [
+            "Ricardo" => "Ricardo",
+            "Vitoria" => "Vitoria",
+            "Camila" => "Camila",
+        ],
+        self::M_LANG_PTPT => ["Ines" => "Ines", "Cristiano" => "Cristiano"],
+        self::M_LANG_RORO => ["Carmen" => "Carmen"],
         self::M_LANG_RURU => ["Tatyana" => "Tatyana", "Maxim" => "Maxim"],
-        self::M_LANG_ESUS => ['Miguel' => 'Miguel', 'Penelope' => 'Penelope', 'Lupe' => 'Lupe', 'Pedro' => 'Pedro'],
-        self::M_LANG_ESES => ['Enrique' => 'Enrique', 'Conchita' => 'Conchita', 'Lucia' => 'Lucia'],
-        self::M_LANG_SVSE => ['Astrid' => 'Astrid'],
-        self::M_LANG_SOSO => ['so-SO-Azure-UbaxNeural' => 'Ubax_a', 'so-SO-Azure-MuuseNeural' => 'Muuse_a'],
-        self::M_LANG_TRTR => ['Filiz' => 'Filiz'],
+        self::M_LANG_ESUS => [
+            "Miguel" => "Miguel",
+            "Penelope" => "Penelope",
+            "Lupe" => "Lupe",
+            "Pedro" => "Pedro",
+        ],
+        self::M_LANG_ESES => [
+            "Enrique" => "Enrique",
+            "Conchita" => "Conchita",
+            "Lucia" => "Lucia",
+        ],
+        self::M_LANG_SVSE => ["Astrid" => "Astrid"],
+        self::M_LANG_SOSO => [
+            "so-SO-Azure-UbaxNeural" => "Ubax_a",
+            "so-SO-Azure-MuuseNeural" => "Muuse_a",
+        ],
+        self::M_LANG_TRTR => ["Filiz" => "Filiz"],
     ];
 
     const ALL_VOICES = [
-        self::M_LANG_ARAE => ['Hala' => 'Hala', 'Zayd' => 'Zayd'],
-        self::M_LANG_ARSA => ['Zeina' => 'Zeina', 'ar-MA-Azure-JamalNeural' => 'Jamal_a', 'ar-XA-Wavenet-B' => 'Amir_g', 'ar-XA-Wavenet-A' => 'Salma_g', 'ar-MA-Azure-MounaNeural' => 'Mouna_a'],
-        self::M_LANG_BGBG => ['bg-BG-Standard-A' => 'Mila_g'], // nikolai
-        self::M_LANG_HRHR => ['hr-HR-Whisper-alloy' => 'Marko', 'hr-HR-Whisper-shimmer' => 'Ivana'],
-        self::M_LANG_ZHCN => ['Zhiyu' => 'Zhiyu'],
-        self::M_LANG_CSCZ => ['cs-CZ-Wavenet-A' => 'Zuzana_g', 'cs-CZ-Standard-A' => 'Karolina_g'],
-        self::M_LANG_DADK => ['Naja' => 'Naja', 'Mads' => 'Mads'],
-        self::M_LANG_NLNL => ["Ruben" => "Ruben", "Lotte" => "Lotte", "Laura" => "Laura"],
-        self::M_LANG_NLBE => ["nl-BE-Wavenet-B" => "Marc_g", "nl-BE-Wavenet-A" => "Marie_g", "Lisa" => "Lisa"],
-            // constants::M_LANG_DECH => [],
-        self::M_LANG_ENUS => [
-            'Joey' => 'Joey',
-            'Justin' => 'Justin',
-            'Kevin' => 'Kevin',
-            'Matthew' => 'Matthew',
-            'en-US-LemonFox-puck' => 'Puck',
-            'Ivy' => 'Ivy',
-            'Joanna' => 'Joanna',
-            'Kendra' => 'Kendra',
-            'Kimberly' => 'Kimberly',
-            'Salli' => 'Salli',
-            'en-US-Whisper-alloy' => 'Ricky',
-            'en-US-Whisper-onyx' => 'Ed',
-            'en-US-Whisper-nova' => 'Tiffany',
-            'en-US-Whisper-shimmer' => 'Tammy',
+        self::M_LANG_ARAE => ["Hala" => "Hala", "Zayd" => "Zayd"],
+        self::M_LANG_ARSA => [
+            "Zeina" => "Zeina",
+            "ar-MA-Azure-JamalNeural" => "Jamal_a",
+            "ar-XA-Wavenet-B" => "Amir_g",
+            "ar-XA-Wavenet-A" => "Salma_g",
+            "ar-MA-Azure-MounaNeural" => "Mouna_a",
         ],
-        self::M_LANG_ENGB => ['Brian' => 'Brian', 'Amy' => 'Amy', 'Emma' => 'Emma', 'Arthur' => 'Arthur'],
-        self::M_LANG_ENAU => ['Russell' => 'Russell', 'Nicole' => 'Nicole', 'Olivia' => 'Olivia'],
-        self::M_LANG_ENNZ => ['Aria' => 'Aria'],
-        self::M_LANG_ENZA => ['Ayanda' => 'Ayanda'],
-        self::M_LANG_ENIN => ['Aditi' => 'Aditi', 'Raveena' => 'Raveena', 'Kajal' => 'Kajal'],
-            // constants::M_LANG_ENIE => [],
+        self::M_LANG_BGBG => ["bg-BG-Standard-A" => "Mila_g"], // nikolai
+        self::M_LANG_HRHR => [
+            "hr-HR-Whisper-alloy" => "Marko",
+            "hr-HR-Whisper-shimmer" => "Ivana",
+        ],
+        self::M_LANG_ZHCN => ["Zhiyu" => "Zhiyu"],
+        self::M_LANG_CSCZ => [
+            "cs-CZ-Wavenet-A" => "Zuzana_g",
+            "cs-CZ-Standard-A" => "Karolina_g",
+        ],
+        self::M_LANG_DADK => ["Naja" => "Naja", "Mads" => "Mads"],
+        self::M_LANG_NLNL => [
+            "Ruben" => "Ruben",
+            "Lotte" => "Lotte",
+            "Laura" => "Laura",
+        ],
+        self::M_LANG_NLBE => [
+            "nl-BE-Wavenet-B" => "Marc_g",
+            "nl-BE-Wavenet-A" => "Marie_g",
+            "Lisa" => "Lisa",
+        ],
+        // constants::M_LANG_DECH => [],
+        self::M_LANG_ENUS => [
+            "Joey" => "Joey",
+            "Justin" => "Justin",
+            "Kevin" => "Kevin",
+            "Matthew" => "Matthew",
+            "en-US-LemonFox-puck" => "Puck",
+            "Ivy" => "Ivy",
+            "Joanna" => "Joanna",
+            "Kendra" => "Kendra",
+            "Kimberly" => "Kimberly",
+            "Salli" => "Salli",
+            "en-US-Whisper-alloy" => "Ricky",
+            "en-US-Whisper-onyx" => "Ed",
+            "en-US-Whisper-nova" => "Tiffany",
+            "en-US-Whisper-shimmer" => "Tammy",
+        ],
+        self::M_LANG_ENGB => [
+            "Brian" => "Brian",
+            "Amy" => "Amy",
+            "Emma" => "Emma",
+            "Arthur" => "Arthur",
+        ],
+        self::M_LANG_ENAU => [
+            "Russell" => "Russell",
+            "Nicole" => "Nicole",
+            "Olivia" => "Olivia",
+        ],
+        self::M_LANG_ENNZ => ["Aria" => "Aria"],
+        self::M_LANG_ENZA => ["Ayanda" => "Ayanda"],
+        self::M_LANG_ENIN => [
+            "Aditi" => "Aditi",
+            "Raveena" => "Raveena",
+            "Kajal" => "Kajal",
+        ],
+        // constants::M_LANG_ENIE => [],
         self::M_LANG_ENWL => ["Geraint" => "Geraint"],
-            // constants::M_LANG_ENAB => [],
-        self::M_LANG_FILPH => ['fil-PH-Wavenet-A' => 'Darna_g', 'fil-PH-Wavenet-B' => 'Reyna_g', 'fil-PH-Wavenet-C' => 'Bayani_g', 'fil-PH-Wavenet-D' => 'Ernesto_g'],
-        self::M_LANG_FIFI => ['Suvi' => 'Suvi', 'fi-FI-Wavenet-A' => 'Kaarina_g'],
-        self::M_LANG_FRCA => ['Chantal' => 'Chantal', 'Gabrielle' => 'Gabrielle', 'Liam' => 'Liam'],
-        self::M_LANG_FRFR => ['Mathieu' => 'Mathieu', 'Celine' => 'Celine', 'Lea' => 'Lea', 'Remi' => 'Remi'],
-        self::M_LANG_DEDE => ['Hans' => 'Hans', 'Marlene' => 'Marlene', 'Vicki' => 'Vicki', 'Daniel' => 'Daniel'],
-        self::M_LANG_DEAT => ['Hannah' => 'Hannah'],
-        self::M_LANG_ELGR => ['el-GR-Wavenet-A' => 'Sophia_g', 'el-GR-Standard-A' => 'Isabella_g'],
+        // constants::M_LANG_ENAB => [],
+        self::M_LANG_FILPH => [
+            "fil-PH-Wavenet-A" => "Darna_g",
+            "fil-PH-Wavenet-B" => "Reyna_g",
+            "fil-PH-Wavenet-C" => "Bayani_g",
+            "fil-PH-Wavenet-D" => "Ernesto_g",
+        ],
+        self::M_LANG_FIFI => [
+            "Suvi" => "Suvi",
+            "fi-FI-Wavenet-A" => "Kaarina_g",
+        ],
+        self::M_LANG_FRCA => [
+            "Chantal" => "Chantal",
+            "Gabrielle" => "Gabrielle",
+            "Liam" => "Liam",
+        ],
+        self::M_LANG_FRFR => [
+            "Mathieu" => "Mathieu",
+            "Celine" => "Celine",
+            "Lea" => "Lea",
+            "Remi" => "Remi",
+        ],
+        self::M_LANG_DEDE => [
+            "Hans" => "Hans",
+            "Marlene" => "Marlene",
+            "Vicki" => "Vicki",
+            "Daniel" => "Daniel",
+        ],
+        self::M_LANG_DEAT => ["Hannah" => "Hannah"],
+        self::M_LANG_ELGR => [
+            "el-GR-Wavenet-A" => "Sophia_g",
+            "el-GR-Standard-A" => "Isabella_g",
+        ],
         self::M_LANG_HIIN => ["Aditi" => "Aditi"],
-        self::M_LANG_HEIL => ['he-IL-Wavenet-A' => 'Sarah_g', 'he-IL-Wavenet-B' => 'Noah_g'],
-        self::M_LANG_HUHU => ['hu-HU-Wavenet-A' => 'Eszter_g'],
+        self::M_LANG_HEIL => [
+            "he-IL-Wavenet-A" => "Sarah_g",
+            "he-IL-Wavenet-B" => "Noah_g",
+        ],
+        self::M_LANG_HUHU => ["hu-HU-Wavenet-A" => "Eszter_g"],
 
-        self::M_LANG_IDID => ['id-ID-Wavenet-A' => 'Guntur_g', 'id-ID-Wavenet-B' => 'Bhoomik_g'],
-        self::M_LANG_ISIS => ['Dora' => 'Dora', 'Karl' => 'Karl'],
-        self::M_LANG_ITIT => ['Carla' => 'Carla', 'Bianca' => 'Bianca', 'Giorgio' => 'Giorgio'],
-        self::M_LANG_JAJP => ['Takumi' => 'Takumi', 'Mizuki' => 'Mizuki', 'Kazuha' => 'Kazuha', 'Tomoko' => 'Tomoko'],
-        self::M_LANG_KOKR => ['Seoyeon' => 'Seoyeon'],
-        self::M_LANG_LVLV => ['lv-LV-Standard-A' => 'Janis_g'],
-        self::M_LANG_LTLT => ['lt-LT-Standard-A' => 'Matas_g'],
-        self::M_LANG_MINZ => ['mi-NZ-Whisper-alloy' => 'Tane', 'mi-NZ-Whisper-shimmer' => 'Aroha'],
-        self::M_LANG_MKMK => ['mk-MK-Whisper-alloy' => 'Trajko', 'mk-MK-Whisper-shimmer' => 'Marija'],
-        self::M_LANG_MSMY => ['ms-MY-Whisper-alloy' => 'Afsah', 'ms-MY-Whisper-shimmer' => 'Siti'],
-        self::M_LANG_NONO => ['Liv' => 'Liv', 'Ida' => 'Ida', 'nb-NO-Wavenet-B' => 'Lars_g', 'nb-NO-Wavenet-A' => 'Hedda_g', 'nb-NO-Wavenet-D' => 'Anders_g'],
-        self::M_LANG_PSAF => ['ps-AF-Azure-GulNawazNeural' => 'GulNawaz_a', 'ps-AF-Azure-LatifaNeural' => 'Latifa_a'],
-        self::M_LANG_FAIR => ['fa-IR-Azure-FaridNeural' => 'Farid_a', 'fa-IR-Azure-DilaraNeural' => 'Dilara_a'],
-        self::M_LANG_PLPL => ['Ewa' => 'Ewa', 'Maja' => 'Maja', 'Jacek' => 'Jacek', 'Jan' => 'Jan'],
-        self::M_LANG_PTBR => ['Ricardo' => 'Ricardo', 'Vitoria' => 'Vitoria', 'Camila' => 'Camila'],
-        self::M_LANG_PTPT => ["Ines" => "Ines", 'Cristiano' => 'Cristiano'],
-        self::M_LANG_RORO => ['Carmen' => 'Carmen', 'ro-RO-Wavenet-A' => 'Sorina_g'],
-        self::M_LANG_RURU => ["Tatyana" => "Tatyana", "Maxim" => "Maxim", "ru-RU-Azure-SvetlanaNeural" => 'Svetlana_a', "ru-RU-Azure-DmitryNeural" => "Dmitry_a", "ru-RU-Azure-DariyaNeural" => "Dariya_a"],
-        self::M_LANG_ESUS => ['Miguel' => 'Miguel', 'Penelope' => 'Penelope', 'Lupe' => 'Lupe', 'Pedro' => 'Pedro'],
-        self::M_LANG_ESES => ['Enrique' => 'Enrique', 'Conchita' => 'Conchita', 'Lucia' => 'Lucia'],
-        self::M_LANG_SVSE => ['Astrid' => 'Astrid', 'Elin' => 'Elin'],
-        self::M_LANG_SKSK => ['sk-SK-Wavenet-A' => 'Laura_g', 'sk-SK-Standard-A' => 'Natalia_g'],
-        self::M_LANG_SLSI => ['sl-SI-Whisper-alloy' => 'Vid', 'sl-SI-Whisper-shimmer' => 'Pia'],
-        self::M_LANG_SOSO => ['so-SO-Azure-UbaxNeural' => 'Ubax_a', 'so-SO-Azure-MuuseNeural' => 'Muuse_a'],
-        self::M_LANG_SRRS => ['sr-RS-Standard-A' => 'Milena_g'],
-        self::M_LANG_TAIN => ['ta-IN-Wavenet-A' => 'Dyuthi_g', 'ta-IN-Wavenet-B' => 'Bhoomik_g'],
-        self::M_LANG_TEIN => ['te-IN-Standard-A' => 'Anandi_g', 'te-IN-Standard-B' => 'Kai_g'],
-        self::M_LANG_TRTR => ['Filiz' => 'Filiz'],
-        self::M_LANG_UKUA => ['uk-UA-Wavenet-A' => 'Katya_g'],
-        self::M_LANG_VIVN => ['vi-VN-Wavenet-A' => 'Huyen_g', 'vi-VN-Wavenet-B' => 'Duy_g'],
+        self::M_LANG_IDID => [
+            "id-ID-Wavenet-A" => "Guntur_g",
+            "id-ID-Wavenet-B" => "Bhoomik_g",
+        ],
+        self::M_LANG_ISIS => ["Dora" => "Dora", "Karl" => "Karl"],
+        self::M_LANG_ITIT => [
+            "Carla" => "Carla",
+            "Bianca" => "Bianca",
+            "Giorgio" => "Giorgio",
+        ],
+        self::M_LANG_JAJP => [
+            "Takumi" => "Takumi",
+            "Mizuki" => "Mizuki",
+            "Kazuha" => "Kazuha",
+            "Tomoko" => "Tomoko",
+        ],
+        self::M_LANG_KOKR => ["Seoyeon" => "Seoyeon"],
+        self::M_LANG_LVLV => ["lv-LV-Standard-A" => "Janis_g"],
+        self::M_LANG_LTLT => ["lt-LT-Standard-A" => "Matas_g"],
+        self::M_LANG_MINZ => [
+            "mi-NZ-Whisper-alloy" => "Tane",
+            "mi-NZ-Whisper-shimmer" => "Aroha",
+        ],
+        self::M_LANG_MKMK => [
+            "mk-MK-Whisper-alloy" => "Trajko",
+            "mk-MK-Whisper-shimmer" => "Marija",
+        ],
+        self::M_LANG_MSMY => [
+            "ms-MY-Whisper-alloy" => "Afsah",
+            "ms-MY-Whisper-shimmer" => "Siti",
+        ],
+        self::M_LANG_NONO => [
+            "Liv" => "Liv",
+            "Ida" => "Ida",
+            "nb-NO-Wavenet-B" => "Lars_g",
+            "nb-NO-Wavenet-A" => "Hedda_g",
+            "nb-NO-Wavenet-D" => "Anders_g",
+        ],
+        self::M_LANG_PSAF => [
+            "ps-AF-Azure-GulNawazNeural" => "GulNawaz_a",
+            "ps-AF-Azure-LatifaNeural" => "Latifa_a",
+        ],
+        self::M_LANG_FAIR => [
+            "fa-IR-Azure-FaridNeural" => "Farid_a",
+            "fa-IR-Azure-DilaraNeural" => "Dilara_a",
+        ],
+        self::M_LANG_PLPL => [
+            "Ewa" => "Ewa",
+            "Maja" => "Maja",
+            "Jacek" => "Jacek",
+            "Jan" => "Jan",
+        ],
+        self::M_LANG_PTBR => [
+            "Ricardo" => "Ricardo",
+            "Vitoria" => "Vitoria",
+            "Camila" => "Camila",
+        ],
+        self::M_LANG_PTPT => ["Ines" => "Ines", "Cristiano" => "Cristiano"],
+        self::M_LANG_RORO => [
+            "Carmen" => "Carmen",
+            "ro-RO-Wavenet-A" => "Sorina_g",
+        ],
+        self::M_LANG_RURU => [
+            "Tatyana" => "Tatyana",
+            "Maxim" => "Maxim",
+            "ru-RU-Azure-SvetlanaNeural" => "Svetlana_a",
+            "ru-RU-Azure-DmitryNeural" => "Dmitry_a",
+            "ru-RU-Azure-DariyaNeural" => "Dariya_a",
+        ],
+        self::M_LANG_ESUS => [
+            "Miguel" => "Miguel",
+            "Penelope" => "Penelope",
+            "Lupe" => "Lupe",
+            "Pedro" => "Pedro",
+        ],
+        self::M_LANG_ESES => [
+            "Enrique" => "Enrique",
+            "Conchita" => "Conchita",
+            "Lucia" => "Lucia",
+        ],
+        self::M_LANG_SVSE => ["Astrid" => "Astrid", "Elin" => "Elin"],
+        self::M_LANG_SKSK => [
+            "sk-SK-Wavenet-A" => "Laura_g",
+            "sk-SK-Standard-A" => "Natalia_g",
+        ],
+        self::M_LANG_SLSI => [
+            "sl-SI-Whisper-alloy" => "Vid",
+            "sl-SI-Whisper-shimmer" => "Pia",
+        ],
+        self::M_LANG_SOSO => [
+            "so-SO-Azure-UbaxNeural" => "Ubax_a",
+            "so-SO-Azure-MuuseNeural" => "Muuse_a",
+        ],
+        self::M_LANG_SRRS => ["sr-RS-Standard-A" => "Milena_g"],
+        self::M_LANG_TAIN => [
+            "ta-IN-Wavenet-A" => "Dyuthi_g",
+            "ta-IN-Wavenet-B" => "Bhoomik_g",
+        ],
+        self::M_LANG_TEIN => [
+            "te-IN-Standard-A" => "Anandi_g",
+            "te-IN-Standard-B" => "Kai_g",
+        ],
+        self::M_LANG_TRTR => ["Filiz" => "Filiz"],
+        self::M_LANG_UKUA => ["uk-UA-Wavenet-A" => "Katya_g"],
+        self::M_LANG_VIVN => [
+            "vi-VN-Wavenet-A" => "Huyen_g",
+            "vi-VN-Wavenet-B" => "Duy_g",
+        ],
     ];
 
     // CSS ids/classes
-    const M_RECORD_BUTTON = 'mod_minilesson_record_button';
-    const M_START_BUTTON = 'mod_minilesson_start_button';
-    const M_READING_AUDIO_URL = 'mod_minilesson_readingaudiourl';
-    const M_DRAFT_CONTROL = 'mod_minilesson_draft_control';
-    const M_PROGRESS_CONTAINER = 'mod_minilesson_progress_cont';
-    const M_HIDER = 'mod_minilesson_hider';
-    const M_STOP_BUTTON = 'mod_minilesson_stop_button';
-    const M_WHERETONEXT_CONTAINER = 'mod_minilesson_wheretonext_cont';
-    const M_RECORD_BUTTON_CONTAINER = 'mod_minilesson_record_button_cont';
-    const M_START_BUTTON_CONTAINER = 'mod_minilesson_start_button_cont';
-    const M_STOP_BUTTON_CONTAINER = 'mod_minilesson_stop_button_cont';
-    const M_RECORDERID = 'therecorderid';
-    const M_RECORDING_CONTAINER = 'mod_minilesson_recording_cont';
-    const M_RECORDER_CONTAINER = 'mod_minilesson_recorder_cont';
-    const M_DUMMY_RECORDER = 'mod_minilesson_dummy_recorder';
-    const M_RECORDER_INSTRUCTIONS_RIGHT = 'mod_minilesson_recorder_instr_right';
-    const M_RECORDER_INSTRUCTIONS_LEFT = 'mod_minilesson_recorder_instr_left';
-    const M_INSTRUCTIONS_CONTAINER = 'mod_minilesson_instructions_cont';
-    const M_PASSAGE_CONTAINER = 'mod_minilesson_passage_cont';
-    const M_MSV_MODE = 'mod_minilesson_msvmode';
-    const M_QUICK_MODE = 'mod_minilesson_spotcheckmode';
-    const M_GRADING_MODE = 'mod_minilesson_gradingmode';
-    const M_QUIZ_CONTAINER = 'mod_minilesson_quiz_cont';
-    const M_QUIZ_PLACEHOLDER = 'mod_minilesson_placeholder';
-    const M_QUIZ_SKELETONBOX = 'mod_minilesson_skeleton_box';
-    const M_POSTATTEMPT = 'mod_minilesson_postattempt';
-    const M_FEEDBACK_CONTAINER = 'mod_minilesson_feedback_cont';
-    const M_ERROR_CONTAINER = 'mod_minilesson_error_cont';
-    const M_GRADING_ERROR_CONTAINER = 'mod_minilesson_grading_error_cont';
-    const M_GRADING_ERROR_IMG = 'mod_minilesson_grading_error_img';
-    const M_GRADING_ERROR_SCORE = 'mod_minilesson_grading_error_score';
+    const M_RECORD_BUTTON = "mod_minilesson_record_button";
+    const M_START_BUTTON = "mod_minilesson_start_button";
+    const M_READING_AUDIO_URL = "mod_minilesson_readingaudiourl";
+    const M_DRAFT_CONTROL = "mod_minilesson_draft_control";
+    const M_PROGRESS_CONTAINER = "mod_minilesson_progress_cont";
+    const M_HIDER = "mod_minilesson_hider";
+    const M_STOP_BUTTON = "mod_minilesson_stop_button";
+    const M_WHERETONEXT_CONTAINER = "mod_minilesson_wheretonext_cont";
+    const M_RECORD_BUTTON_CONTAINER = "mod_minilesson_record_button_cont";
+    const M_START_BUTTON_CONTAINER = "mod_minilesson_start_button_cont";
+    const M_STOP_BUTTON_CONTAINER = "mod_minilesson_stop_button_cont";
+    const M_RECORDERID = "therecorderid";
+    const M_RECORDING_CONTAINER = "mod_minilesson_recording_cont";
+    const M_RECORDER_CONTAINER = "mod_minilesson_recorder_cont";
+    const M_DUMMY_RECORDER = "mod_minilesson_dummy_recorder";
+    const M_RECORDER_INSTRUCTIONS_RIGHT = "mod_minilesson_recorder_instr_right";
+    const M_RECORDER_INSTRUCTIONS_LEFT = "mod_minilesson_recorder_instr_left";
+    const M_INSTRUCTIONS_CONTAINER = "mod_minilesson_instructions_cont";
+    const M_PASSAGE_CONTAINER = "mod_minilesson_passage_cont";
+    const M_MSV_MODE = "mod_minilesson_msvmode";
+    const M_QUICK_MODE = "mod_minilesson_spotcheckmode";
+    const M_GRADING_MODE = "mod_minilesson_gradingmode";
+    const M_QUIZ_CONTAINER = "mod_minilesson_quiz_cont";
+    const M_QUIZ_PLACEHOLDER = "mod_minilesson_placeholder";
+    const M_QUIZ_SKELETONBOX = "mod_minilesson_skeleton_box";
+    const M_POSTATTEMPT = "mod_minilesson_postattempt";
+    const M_FEEDBACK_CONTAINER = "mod_minilesson_feedback_cont";
+    const M_ERROR_CONTAINER = "mod_minilesson_error_cont";
+    const M_GRADING_ERROR_CONTAINER = "mod_minilesson_grading_error_cont";
+    const M_GRADING_ERROR_IMG = "mod_minilesson_grading_error_img";
+    const M_GRADING_ERROR_SCORE = "mod_minilesson_grading_error_score";
 
-    const M_GRADING_QUIZ_CONTAINER = 'mod_minilesson_grading_quiz_cont';
-    const M_TWOCOL_CONTAINER = 'mod_minilesson_twocol_cont';
-    const M_TWOCOL_QUIZ_CONTAINER = 'mod_minilesson_twocol_quiz_cont';
-    const M_TWOCOL_PLAYER_CONTAINER = 'mod_minilesson_twocol_player_cont';
-    const M_TWOCOL_PLAYER = 'mod_minilesson_twocol_player';
-    const M_TWOCOL_LEFTCOL = 'mod_minilesson_leftcol';
-    const M_TWOCOL_RIGHTCOL = 'mod_minilesson_rightcol';
-    const M_GRADING_QUIZ_SCORE = 'mod_minilesson_grading_quiz_score';
-    const M_GRADING_ACCURACY_CONTAINER = 'mod_minilesson_grading_accuracy_cont';
-    const M_GRADING_ACCURACY_IMG = 'mod_minilesson_grading_accuracy_img';
-    const M_GRADING_ACCURACY_SCORE = 'mod_minilesson_grading_accuracy_score';
-    const M_GRADING_SESSION_SCORE = 'mod_minilesson_grading_session_score';
-    const M_GRADING_SESSIONSCORE_CONTAINER = 'mod_minilesson_grading_sessionscore_cont';
-    const M_GRADING_ERRORRATE_SCORE = 'mod_minilesson_grading_errorrate_score';
-    const M_GRADING_ERRORRATE_CONTAINER = 'mod_minilesson_grading_errorrate_cont';
-    const M_GRADING_SCRATE_SCORE = 'mod_minilesson_grading_scrate_score';
-    const M_GRADING_SCRATE_CONTAINER = 'mod_minilesson_grading_scrate_cont';
-    const M_GRADING_SCORE = 'mod_minilesson_grading_score';
-    const M_GRADING_PLAYER_CONTAINER = 'mod_minilesson_grading_player_cont';
-    const M_GRADING_PLAYER = 'mod_minilesson_grading_player';
-    const M_GRADING_ACTION_CONTAINER = 'mod_minilesson_grading_action_cont';
-    const M_GRADING_FORM_SESSIONTIME = 'mod_minilesson_grading_form_sessiontime';
-    const M_GRADING_FORM_SESSIONSCORE = 'mod_minilesson_grading_form_sessionscore';
-    const M_GRADING_FORM_SESSIONENDWORD = 'mod_minilesson_grading_form_sessionendword';
-    const M_GRADING_FORM_SESSIONERRORS = 'mod_minilesson_grading_form_sessionerrors';
-    const M_GRADING_FORM_NOTES = 'mod_minilesson_grading_form_notes';
-    const M_HIDDEN_PLAYER = 'mod_minilesson_hidden_player';
-    const M_HIDDEN_PLAYER_BUTTON = 'mod_minilesson_hidden_player_button';
-    const M_HIDDEN_PLAYER_BUTTON_ACTIVE = 'mod_minilesson_hidden_player_button_active';
-    const M_HIDDEN_PLAYER_BUTTON_PAUSED = 'mod_minilesson_hidden_player_button_paused';
-    const M_HIDDEN_PLAYER_BUTTON_PLAYING = 'mod_minilesson_hidden_player_button_playing';
-    const M_EVALUATED_MESSAGE = 'mod_minilesson_evaluated_message';
-    const M_QR_PLAYER = 'mod_minilesson_qr_player';
-    const M_LINK_BOX = 'mod_minilesson_link_box';
-    const M_LINK_BOX_TITLE = 'mod_minilesson_link_box_title';
-    const M_NOITEMS_MSG = 'mod_minilesson_noitems_msg';
-
+    const M_GRADING_QUIZ_CONTAINER = "mod_minilesson_grading_quiz_cont";
+    const M_TWOCOL_CONTAINER = "mod_minilesson_twocol_cont";
+    const M_TWOCOL_QUIZ_CONTAINER = "mod_minilesson_twocol_quiz_cont";
+    const M_TWOCOL_PLAYER_CONTAINER = "mod_minilesson_twocol_player_cont";
+    const M_TWOCOL_PLAYER = "mod_minilesson_twocol_player";
+    const M_TWOCOL_LEFTCOL = "mod_minilesson_leftcol";
+    const M_TWOCOL_RIGHTCOL = "mod_minilesson_rightcol";
+    const M_GRADING_QUIZ_SCORE = "mod_minilesson_grading_quiz_score";
+    const M_GRADING_ACCURACY_CONTAINER = "mod_minilesson_grading_accuracy_cont";
+    const M_GRADING_ACCURACY_IMG = "mod_minilesson_grading_accuracy_img";
+    const M_GRADING_ACCURACY_SCORE = "mod_minilesson_grading_accuracy_score";
+    const M_GRADING_SESSION_SCORE = "mod_minilesson_grading_session_score";
+    const M_GRADING_SESSIONSCORE_CONTAINER = "mod_minilesson_grading_sessionscore_cont";
+    const M_GRADING_ERRORRATE_SCORE = "mod_minilesson_grading_errorrate_score";
+    const M_GRADING_ERRORRATE_CONTAINER = "mod_minilesson_grading_errorrate_cont";
+    const M_GRADING_SCRATE_SCORE = "mod_minilesson_grading_scrate_score";
+    const M_GRADING_SCRATE_CONTAINER = "mod_minilesson_grading_scrate_cont";
+    const M_GRADING_SCORE = "mod_minilesson_grading_score";
+    const M_GRADING_PLAYER_CONTAINER = "mod_minilesson_grading_player_cont";
+    const M_GRADING_PLAYER = "mod_minilesson_grading_player";
+    const M_GRADING_ACTION_CONTAINER = "mod_minilesson_grading_action_cont";
+    const M_GRADING_FORM_SESSIONTIME = "mod_minilesson_grading_form_sessiontime";
+    const M_GRADING_FORM_SESSIONSCORE = "mod_minilesson_grading_form_sessionscore";
+    const M_GRADING_FORM_SESSIONENDWORD = "mod_minilesson_grading_form_sessionendword";
+    const M_GRADING_FORM_SESSIONERRORS = "mod_minilesson_grading_form_sessionerrors";
+    const M_GRADING_FORM_NOTES = "mod_minilesson_grading_form_notes";
+    const M_HIDDEN_PLAYER = "mod_minilesson_hidden_player";
+    const M_HIDDEN_PLAYER_BUTTON = "mod_minilesson_hidden_player_button";
+    const M_HIDDEN_PLAYER_BUTTON_ACTIVE = "mod_minilesson_hidden_player_button_active";
+    const M_HIDDEN_PLAYER_BUTTON_PAUSED = "mod_minilesson_hidden_player_button_paused";
+    const M_HIDDEN_PLAYER_BUTTON_PLAYING = "mod_minilesson_hidden_player_button_playing";
+    const M_EVALUATED_MESSAGE = "mod_minilesson_evaluated_message";
+    const M_QR_PLAYER = "mod_minilesson_qr_player";
+    const M_LINK_BOX = "mod_minilesson_link_box";
+    const M_LINK_BOX_TITLE = "mod_minilesson_link_box_title";
+    const M_NOITEMS_MSG = "mod_minilesson_noitems_msg";
 
     // languages
-    const M_LANG_ENUS = 'en-US';
-    const M_LANG_ENGB = 'en-GB';
-    const M_LANG_ENAU = 'en-AU';
-    const M_LANG_ENNZ = 'en-NZ';
-    const M_LANG_ENZA = 'en-ZA';
-    const M_LANG_ENIN = 'en-IN';
-    const M_LANG_ESUS = 'es-US';
-    const M_LANG_ESES = 'es-ES';
-    const M_LANG_FRCA = 'fr-CA';
-    const M_LANG_FRFR = 'fr-FR';
-    const M_LANG_DEDE = 'de-DE';
-    const M_LANG_DEAT = 'de-AT';
-    const M_LANG_ITIT = 'it-IT';
-    const M_LANG_PTBR = 'pt-BR';
+    const M_LANG_ENUS = "en-US";
+    const M_LANG_ENGB = "en-GB";
+    const M_LANG_ENAU = "en-AU";
+    const M_LANG_ENNZ = "en-NZ";
+    const M_LANG_ENZA = "en-ZA";
+    const M_LANG_ENIN = "en-IN";
+    const M_LANG_ESUS = "es-US";
+    const M_LANG_ESES = "es-ES";
+    const M_LANG_FRCA = "fr-CA";
+    const M_LANG_FRFR = "fr-FR";
+    const M_LANG_DEDE = "de-DE";
+    const M_LANG_DEAT = "de-AT";
+    const M_LANG_ITIT = "it-IT";
+    const M_LANG_PTBR = "pt-BR";
 
-    const M_LANG_DADK = 'da-DK';
-    const M_LANG_FILPH = 'fil-PH';
+    const M_LANG_DADK = "da-DK";
+    const M_LANG_FILPH = "fil-PH";
 
-    const M_LANG_KOKR = 'ko-KR';
-    const M_LANG_HIIN = 'hi-IN';
-    const M_LANG_ARAE = 'ar-AE';
-    const M_LANG_ARSA = 'ar-SA';
-    const M_LANG_ZHCN = 'zh-CN';
-    const M_LANG_NLNL = 'nl-NL';
-    const M_LANG_NLBE = 'nl-BE';
-    const M_LANG_ENIE = 'en-IE';
-    const M_LANG_ENWL = 'en-WL';
-    const M_LANG_ENAB = 'en-AB';
-    const M_LANG_FAIR = 'fa-IR';
-    const M_LANG_DECH = 'de-CH';
-    const M_LANG_HEIL = 'he-IL';
-    const M_LANG_IDID = 'id-ID';
-    const M_LANG_JAJP = 'ja-JP';
-    const M_LANG_MSMY = 'ms-MY';
-    const M_LANG_PTPT = 'pt-PT';
-    const M_LANG_RURU = 'ru-RU';
-    const M_LANG_TAIN = 'ta-IN';
-    const M_LANG_TEIN = 'te-IN';
-    const M_LANG_TRTR = 'tr-TR';
-    const M_LANG_NONO = 'no-NO';
-    const M_LANG_NBNO = 'nb-NO';
-    const M_LANG_NNNO = 'nn-NO';
-    const M_LANG_PSAF = 'ps-AF';
-    const M_LANG_PLPL = 'pl-PL';
-    const M_LANG_RORO = 'ro-RO';
-    const M_LANG_SVSE = 'sv-SE';
+    const M_LANG_KOKR = "ko-KR";
+    const M_LANG_HIIN = "hi-IN";
+    const M_LANG_ARAE = "ar-AE";
+    const M_LANG_ARSA = "ar-SA";
+    const M_LANG_ZHCN = "zh-CN";
+    const M_LANG_NLNL = "nl-NL";
+    const M_LANG_NLBE = "nl-BE";
+    const M_LANG_ENIE = "en-IE";
+    const M_LANG_ENWL = "en-WL";
+    const M_LANG_ENAB = "en-AB";
+    const M_LANG_FAIR = "fa-IR";
+    const M_LANG_DECH = "de-CH";
+    const M_LANG_HEIL = "he-IL";
+    const M_LANG_IDID = "id-ID";
+    const M_LANG_JAJP = "ja-JP";
+    const M_LANG_MSMY = "ms-MY";
+    const M_LANG_PTPT = "pt-PT";
+    const M_LANG_RURU = "ru-RU";
+    const M_LANG_TAIN = "ta-IN";
+    const M_LANG_TEIN = "te-IN";
+    const M_LANG_TRTR = "tr-TR";
+    const M_LANG_NONO = "no-NO";
+    const M_LANG_NBNO = "nb-NO";
+    const M_LANG_NNNO = "nn-NO";
+    const M_LANG_PSAF = "ps-AF";
+    const M_LANG_PLPL = "pl-PL";
+    const M_LANG_RORO = "ro-RO";
+    const M_LANG_SVSE = "sv-SE";
 
-    const M_LANG_UKUA = 'uk-UA';
-    const M_LANG_EUES = 'eu-ES';
-    const M_LANG_FIFI = 'fi-FI';
-    const M_LANG_HUHU = 'hu-HU';
+    const M_LANG_UKUA = "uk-UA";
+    const M_LANG_EUES = "eu-ES";
+    const M_LANG_FIFI = "fi-FI";
+    const M_LANG_HUHU = "hu-HU";
 
-    const M_LANG_MINZ = 'mi-NZ';
-    const M_LANG_BGBG = 'bg-BG';
-    const M_LANG_CSCZ = 'cs-CZ';
-    const M_LANG_ELGR = 'el-GR';
-    const M_LANG_HRHR = 'hr-HR';
-    const M_LANG_LTLT = 'lt-LT';
-    const M_LANG_LVLV = 'lv-LV';
-    const M_LANG_SKSK = 'sk-SK';
-    const M_LANG_SLSI = 'sl-SI';
-    const M_LANG_SOSO = 'so-SO';
-    const M_LANG_ISIS = 'is-IS';
-    const M_LANG_MKMK = 'mk-MK';
-    const M_LANG_SRRS = 'sr-RS';
-    const M_LANG_VIVN = 'vi-VN';
+    const M_LANG_MINZ = "mi-NZ";
+    const M_LANG_BGBG = "bg-BG";
+    const M_LANG_CSCZ = "cs-CZ";
+    const M_LANG_ELGR = "el-GR";
+    const M_LANG_HRHR = "hr-HR";
+    const M_LANG_LTLT = "lt-LT";
+    const M_LANG_LVLV = "lv-LV";
+    const M_LANG_SKSK = "sk-SK";
+    const M_LANG_SLSI = "sl-SI";
+    const M_LANG_SOSO = "so-SO";
+    const M_LANG_ISIS = "is-IS";
+    const M_LANG_MKMK = "mk-MK";
+    const M_LANG_SRRS = "sr-RS";
+    const M_LANG_VIVN = "vi-VN";
+    const M_LANG_CRCA = "cr-CA";
 
     const M_PROMPT_SEPARATE = 0;
     const M_PROMPT_RICHTEXT = 1;
@@ -554,7 +746,6 @@ class constants {
     const TRANSCRIBER_NONE = 0;
     const TRANSCRIBER_AUTO = 1;
     const TRANSCRIBER_POODLL = 2;
-
 
     const M_PUSH_NONE = 0;
     const M_PUSH_PASSAGE = 1;
@@ -568,9 +759,9 @@ class constants {
     const M_ANIM_FANCY = 0;
     const M_ANIM_PLAIN = 1;
 
-    const M_CONTWIDTH_COMPACT = 'compact';
-    const M_CONTWIDTH_WIDE = 'wide';
-    const M_CONTWIDTH_FULL = 'full';
+    const M_CONTWIDTH_COMPACT = "compact";
+    const M_CONTWIDTH_WIDE = "wide";
+    const M_CONTWIDTH_FULL = "full";
     const M_STANDARD_FONTS = [
         "Arial",
         "Arial Black",
@@ -632,110 +823,154 @@ class constants {
      */
     const PUSHMODE_SITE = 3;
     const M_LANG_SAMPLES = [
-        self::M_LANG_ARAE => 'عندما يكون الطقس مشمسًا، دعنا نخرج للتنزه في الحديقة.',
-        self::M_LANG_ARSA => 'عندما يكون الطقس مشمسًا، دعنا نخرج للتنزه في الحديقة.',
-        self::M_LANG_EUES => 'Eguraldi eguzkitsua egiten duenean, goazen parkean paseatzera.',
-        self::M_LANG_BGBG => 'Когато времето е слънчево, нека се разходим в парка.',
-        self::M_LANG_HRHR => 'Kad je sunčano vrijeme, idemo u šetnju parkom.',
-        self::M_LANG_ZHCN => '天气晴朗的时候，我们去公园散步吧。',
-        self::M_LANG_CSCZ => 'Až bude slunečné počasí, pojďme se projít do parku.',
-        self::M_LANG_DADK => 'Når vejret er solrigt, lad os gå en tur i parken.',
-        self::M_LANG_NLNL => 'Als het zonnig is, gaan we een wandeling maken in het park.',
-        self::M_LANG_NLBE => 'Als het zonnig is, gaan we een wandeling maken in het park.',
-        self::M_LANG_ENUS => 'When the weather is sunny, let\'s go for a walk in the park.',
-        self::M_LANG_ENGB => 'When the weather is sunny, let\'s go for a walk in the park.',
-        self::M_LANG_ENAU => 'When the weather is sunny, let\'s go for a walk in the park.',
-        self::M_LANG_ENNZ => 'When the weather is sunny, let\'s go for a walk in the park.',
-        self::M_LANG_ENZA => 'When the weather is sunny, let\'s go for a walk in the park.',
-        self::M_LANG_ENIN => 'When the weather is sunny, let\'s go for a walk in the park.',
-        self::M_LANG_ENIE => 'When the weather is sunny, let\'s go for a walk in the park.',
-        self::M_LANG_ENWL => 'When the weather is sunny, let\'s go for a walk in the park.',
-        self::M_LANG_ENAB => 'When the weather is sunny, let\'s go for a walk in the park.',
-        self::M_LANG_FAIR => 'وقتی هوا آفتابی است، بیایید در پارک قدم بزنیم.',
-        self::M_LANG_FILPH => 'Kapag maaraw ang panahon, mamasyal tayo sa parke.',
-        self::M_LANG_FIFI => 'Kun on aurinkoista, mennään puistoon kävelylle.',
-        self::M_LANG_FRCA => 'Quand il fait beau, on va se promener dans le parc.',
-        self::M_LANG_FRFR => 'Quand il fait beau, allons nous promener dans le parc.',
-        self::M_LANG_DEDE => 'Wenn das Wetter sonnig ist, machen wir einen Spaziergang im Park.',
-        self::M_LANG_DEAT => 'Wenn das Wetter sonnig ist, machen wir einen Spaziergang im Park.',
-        self::M_LANG_DECH => 'Wenn das Wetter sonnig ist, machen wir einen Spaziergang im Park.',
-        self::M_LANG_HIIN => 'जब मौसम सुहाना हो तो चलो पार्क में टहलने चलें।.',
-        self::M_LANG_ELGR => 'Όταν ο καιρός είναι ηλιόλουστος, ας πάμε μια βόλτα στο πάρκο.',
-        self::M_LANG_HEIL => 'כשמזג ​​האוויר שמשי, בואו נצא לטייל בפארק.',
-        self::M_LANG_HUHU => 'Amikor süt az idő, menjünk sétálni a parkban.',
-        self::M_LANG_IDID => 'Jika cuaca cerah, mari kita berjalan-jalan di taman.',
-        self::M_LANG_ISIS => 'Þegar sólin skín, förum við í göngutúr í garðinum.',
-        self::M_LANG_ITIT => 'Quando il tempo è soleggiato, andiamo a fare una passeggiata al parco.',
-        self::M_LANG_JAJP => '天気が晴れたら公園に散歩に行きましょう。',
-        self::M_LANG_KOKR => '날씨가 맑으면 공원에 산책하러 가자.',
-        self::M_LANG_LTLT => 'Kai oras saulėtas, eikime pasivaikščioti po parką.',
-        self::M_LANG_LVLV => 'Kad laiks ir saulains, dosimies pastaigā pa parku.',
-        self::M_LANG_MINZ => 'Ka paki te rangi, me haere tatou ki te hīkoi i te papa.',
-        self::M_LANG_MSMY => 'Bila cuaca cerah, jom kita jalan-jalan di taman.',
-        self::M_LANG_MKMK => 'Кога времето е сончево, ајде да одиме на прошетка во паркот.',
-        self::M_LANG_NONO => 'Ora tin solo, ban kana un ratu den parke.',
-        self::M_LANG_PSAF => 'کله چې هوا لمر وي، راځئ چې په پارک کې ګرځو.',
-        self::M_LANG_PLPL => 'Gdy pogoda jest słoneczna, chodźmy na spacer do parku.',
-        self::M_LANG_PTBR => 'Quando o tempo estiver ensolarado, vamos dar uma volta no parque.',
-        self::M_LANG_PTPT => 'Quando o tempo estiver soalheiro, vamos dar uma volta ao parque.',
-        self::M_LANG_RORO => 'Când vremea e însorită, hai să mergem la o plimbare în parc.',
-        self::M_LANG_RURU => 'Когда погода солнечная, давайте прогуляемся в парке.',
-        self::M_LANG_SOSO => 'Marka cimiladu qoraxdu tahay, aan u soconno beerta dhexdeeda.',
-        self::M_LANG_ESUS => 'Cuando el clima esté soleado, salgamos a caminar por el parque.',
-        self::M_LANG_ESES => 'Cuando el clima esté soleado, salgamos a caminar por el parque.',
-        self::M_LANG_SKSK => 'Keď bude slnečné počasie, poďme sa prejsť do parku.',
-        self::M_LANG_SLSI => 'Ko bo sončno vreme, gremo na sprehod v park.',
-        self::M_LANG_SRRS => 'Кад је време сунчано, хајде да прошетамо парком.',
-        self::M_LANG_SVSE => 'När vädret är soligt, låt oss gå en promenad i parken.',
-        self::M_LANG_TAIN => 'வானிலை வெயிலாக இருக்கும்போது, ​​பூங்காவில் நடந்து செல்வோம்.',
-        self::M_LANG_TEIN => 'వాతావరణం ఎండగా ఉన్నప్పుడు, పార్కులో నడకకు వెళ్దాం.',
-        self::M_LANG_TRTR => 'Hava güneşli olunca parkta yürüyüşe çıkalım.',
-        self::M_LANG_UKUA => 'Коли погода сонячна, давайте погуляємо в парку.',
-        self::M_LANG_VIVN => 'Khi trời nắng, chúng ta hãy đi dạo trong công viên.',
+        self::M_LANG_ARAE =>
+            "عندما يكون الطقس مشمسًا، دعنا نخرج للتنزه في الحديقة.",
+        self::M_LANG_ARSA =>
+            "عندما يكون الطقس مشمسًا، دعنا نخرج للتنزه في الحديقة.",
+        self::M_LANG_EUES =>
+            "Eguraldi eguzkitsua egiten duenean, goazen parkean paseatzera.",
+        self::M_LANG_BGBG =>
+            "Когато времето е слънчево, нека се разходим в парка.",
+        self::M_LANG_HRHR => "Kad je sunčano vrijeme, idemo u šetnju parkom.",
+        self::M_LANG_ZHCN => "天气晴朗的时候，我们去公园散步吧。",
+        self::M_LANG_CSCZ =>
+            "Až bude slunečné počasí, pojďme se projít do parku.",
+        self::M_LANG_DADK =>
+            "Når vejret er solrigt, lad os gå en tur i parken.",
+        self::M_LANG_NLNL =>
+            "Als het zonnig is, gaan we een wandeling maken in het park.",
+        self::M_LANG_NLBE =>
+            "Als het zonnig is, gaan we een wandeling maken in het park.",
+        self::M_LANG_ENUS =>
+            'When the weather is sunny, let\'s go for a walk in the park.',
+        self::M_LANG_ENGB =>
+            'When the weather is sunny, let\'s go for a walk in the park.',
+        self::M_LANG_ENAU =>
+            'When the weather is sunny, let\'s go for a walk in the park.',
+        self::M_LANG_ENNZ =>
+            'When the weather is sunny, let\'s go for a walk in the park.',
+        self::M_LANG_ENZA =>
+            'When the weather is sunny, let\'s go for a walk in the park.',
+        self::M_LANG_ENIN =>
+            'When the weather is sunny, let\'s go for a walk in the park.',
+        self::M_LANG_ENIE =>
+            'When the weather is sunny, let\'s go for a walk in the park.',
+        self::M_LANG_ENWL =>
+            'When the weather is sunny, let\'s go for a walk in the park.',
+        self::M_LANG_ENAB =>
+            'When the weather is sunny, let\'s go for a walk in the park.',
+        self::M_LANG_FAIR => "وقتی هوا آفتابی است، بیایید در پارک قدم بزنیم.",
+        self::M_LANG_FILPH =>
+            "Kapag maaraw ang panahon, mamasyal tayo sa parke.",
+        self::M_LANG_FIFI => "Kun on aurinkoista, mennään puistoon kävelylle.",
+        self::M_LANG_FRCA =>
+            "Quand il fait beau, on va se promener dans le parc.",
+        self::M_LANG_FRFR =>
+            "Quand il fait beau, allons nous promener dans le parc.",
+        self::M_LANG_DEDE =>
+            "Wenn das Wetter sonnig ist, machen wir einen Spaziergang im Park.",
+        self::M_LANG_DEAT =>
+            "Wenn das Wetter sonnig ist, machen wir einen Spaziergang im Park.",
+        self::M_LANG_DECH =>
+            "Wenn das Wetter sonnig ist, machen wir einen Spaziergang im Park.",
+        self::M_LANG_HIIN => "जब मौसम सुहाना हो तो चलो पार्क में टहलने चलें।.",
+        self::M_LANG_ELGR =>
+            "Όταν ο καιρός είναι ηλιόλουστος, ας πάμε μια βόλτα στο πάρκο.",
+        self::M_LANG_HEIL => "כשמזג ​​האוויר שמשי, בואו נצא לטייל בפארק.",
+        self::M_LANG_HUHU => "Amikor süt az idő, menjünk sétálni a parkban.",
+        self::M_LANG_IDID =>
+            "Jika cuaca cerah, mari kita berjalan-jalan di taman.",
+        self::M_LANG_ISIS =>
+            "Þegar sólin skín, förum við í göngutúr í garðinum.",
+        self::M_LANG_ITIT =>
+            "Quando il tempo è soleggiato, andiamo a fare una passeggiata al parco.",
+        self::M_LANG_JAJP => "天気が晴れたら公園に散歩に行きましょう。",
+        self::M_LANG_KOKR => "날씨가 맑으면 공원에 산책하러 가자.",
+        self::M_LANG_LTLT =>
+            "Kai oras saulėtas, eikime pasivaikščioti po parką.",
+        self::M_LANG_LVLV =>
+            "Kad laiks ir saulains, dosimies pastaigā pa parku.",
+        self::M_LANG_MINZ =>
+            "Ka paki te rangi, me haere tatou ki te hīkoi i te papa.",
+        self::M_LANG_MSMY => "Bila cuaca cerah, jom kita jalan-jalan di taman.",
+        self::M_LANG_MKMK =>
+            "Кога времето е сончево, ајде да одиме на прошетка во паркот.",
+        self::M_LANG_NONO => "Ora tin solo, ban kana un ratu den parke.",
+        self::M_LANG_PSAF => "کله چې هوا لمر وي، راځئ چې په پارک کې ګرځو.",
+        self::M_LANG_PLPL =>
+            "Gdy pogoda jest słoneczna, chodźmy na spacer do parku.",
+        self::M_LANG_PTBR =>
+            "Quando o tempo estiver ensolarado, vamos dar uma volta no parque.",
+        self::M_LANG_PTPT =>
+            "Quando o tempo estiver soalheiro, vamos dar uma volta ao parque.",
+        self::M_LANG_RORO =>
+            "Când vremea e însorită, hai să mergem la o plimbare în parc.",
+        self::M_LANG_RURU =>
+            "Когда погода солнечная, давайте прогуляемся в парке.",
+        self::M_LANG_SOSO =>
+            "Marka cimiladu qoraxdu tahay, aan u soconno beerta dhexdeeda.",
+        self::M_LANG_ESUS =>
+            "Cuando el clima esté soleado, salgamos a caminar por el parque.",
+        self::M_LANG_ESES =>
+            "Cuando el clima esté soleado, salgamos a caminar por el parque.",
+        self::M_LANG_SKSK =>
+            "Keď bude slnečné počasie, poďme sa prejsť do parku.",
+        self::M_LANG_SLSI => "Ko bo sončno vreme, gremo na sprehod v park.",
+        self::M_LANG_SRRS => "Кад је време сунчано, хајде да прошетамо парком.",
+        self::M_LANG_SVSE =>
+            "När vädret är soligt, låt oss gå en promenad i parken.",
+        self::M_LANG_TAIN =>
+            "வானிலை வெயிலாக இருக்கும்போது, ​​பூங்காவில் நடந்து செல்வோம்.",
+        self::M_LANG_TEIN =>
+            "వాతావరణం ఎండగా ఉన్నప్పుడు, పార్కులో నడకకు వెళ్దాం.",
+        self::M_LANG_TRTR => "Hava güneşli olunca parkta yürüyüşe çıkalım.",
+        self::M_LANG_UKUA => "Коли погода сонячна, давайте погуляємо в парку.",
+        self::M_LANG_VIVN =>
+            "Khi trời nắng, chúng ta hãy đi dạo trong công viên.",
     ];
 
-    const FREESPEAKING_TOPIC = 'customtext5';
+    const FREESPEAKING_TOPIC = "customtext5";
 
-    const FREESPEAKING_AIDATA1 = 'customdata1';
+    const FREESPEAKING_AIDATA1 = "customdata1";
 
-    const FREESPEAKING_AIDATA2 = 'customdata2';
+    const FREESPEAKING_AIDATA2 = "customdata2";
 
-    const FREESPEAKING_GRADINGINSTRUCTIONS = 'customtext6';
+    const FREESPEAKING_GRADINGINSTRUCTIONS = "customtext6";
 
-    const FREESPEAKING_FEEDBACKINSTRUCTIONS = 'customtext2';
+    const FREESPEAKING_FEEDBACKINSTRUCTIONS = "customtext2";
 
-    const FREESPEAKING_GRADINGSELECTION = 'customint4';
+    const FREESPEAKING_GRADINGSELECTION = "customint4";
 
-    const FREESPEAKING_FEEDBACKSELECTION = 'customint5';
+    const FREESPEAKING_FEEDBACKSELECTION = "customint5";
 
-    const FREESPEAKING_HIDECORRECTION = 'customint6';
+    const FREESPEAKING_HIDECORRECTION = "customint6";
 
-    const FREESPEAKING_SHOWGRADE = 'customint7';
+    const FREESPEAKING_SHOWGRADE = "customint7";
 
-    const FREESPEAKING_SHOWRESULT = 'customint8';
+    const FREESPEAKING_SHOWRESULT = "customint8";
 
-    const FREEWRITING_TOPIC = 'customtext5';
+    const FREEWRITING_TOPIC = "customtext5";
 
-    const FREEWRITING_AIDATA1 = 'customdata1';
+    const FREEWRITING_AIDATA1 = "customdata1";
 
-    const FREEWRITING_AIDATA2 = 'customdata2';
+    const FREEWRITING_AIDATA2 = "customdata2";
 
-    const FREEWRITING_GRADINGSELECTION = 'customint5';
+    const FREEWRITING_GRADINGSELECTION = "customint5";
 
-    const FREEWRITING_FEEDBACKSELECTION = 'customint6';
+    const FREEWRITING_FEEDBACKSELECTION = "customint6";
 
-    const FREEWRITING_HIDECORRECTION = 'customint7';
+    const FREEWRITING_HIDECORRECTION = "customint7";
 
-    const FREEWRITING_SHOWGRADE = 'customint8';
+    const FREEWRITING_SHOWGRADE = "customint8";
 
-    const FREEWRITING_SHOWRESULT = 'customint9';
+    const FREEWRITING_SHOWRESULT = "customint9";
 
-    const FREEWRITING_ENABLEVKEYBOARD = 'customtext1';
-    const FREEWRITING_CUSTOMKEYS = 'customtext7';
+    const FREEWRITING_ENABLEVKEYBOARD = "customtext1";
+    const FREEWRITING_CUSTOMKEYS = "customtext7";
 
-    const AUDIOCHAT_INSTRUCTIONSSELECTION = 'customint6';
+    const AUDIOCHAT_INSTRUCTIONSSELECTION = "customint6";
 
-    const AUDIOCHAT_FEEDBACKSELECTION = 'customint7';
+    const AUDIOCHAT_FEEDBACKSELECTION = "customint7";
 
     const MAX_AI_PROMPTS = 6;
 
@@ -763,60 +998,60 @@ class constants {
         self::TYPE_DICTATIONCHAT,
         self::TYPE_SLIDES,
         self::TYPE_FICTION,
-      // constants::TYPE_SMARTFRAME,
-      // constants::TYPE_COMPQUIZ,
-      // constants::TYPE_CONVERSATION,
+        // constants::TYPE_SMARTFRAME,
+        // constants::TYPE_COMPQUIZ,
+        // constants::TYPE_CONVERSATION,
     ];
 
-    const SHORTANSWER_PARTIALLYRESPONSE = 'customtext3';
-    const SHORTANSWER_TOTALMARKS = 'customint1';
-    const SHORTANSWER_PARTIALLYMARKS = 'customint2';
-    const SHORTANSWER_RESPONSETYPE = 'customint3';
+    const SHORTANSWER_PARTIALLYRESPONSE = "customtext3";
+    const SHORTANSWER_TOTALMARKS = "customint1";
+    const SHORTANSWER_PARTIALLYMARKS = "customint2";
+    const SHORTANSWER_RESPONSETYPE = "customint3";
 
     const RESPONSE_TYPE = [
-        'audiorecorder' => 1,
-        'text' => 2,
+        "audiorecorder" => 1,
+        "text" => 2,
     ];
-    const MULTICHOICE_SHUFFLEANSWER = 'customint5';
+    const MULTICHOICE_SHUFFLEANSWER = "customint5";
 
-    const SLIDETHEME = 'customtext2';
-    const SLIDEFONTSIZE = 'customtext3';
+    const SLIDETHEME = "customtext2";
+    const SLIDEFONTSIZE = "customtext3";
 
-    const MULTICHOICE_CORRECTFEEDBACK = 'customtext6';
-    const MULTICHOICE_HIDEANSWERTEXT = 'customint6';
+    const MULTICHOICE_CORRECTFEEDBACK = "customtext6";
+    const MULTICHOICE_HIDEANSWERTEXT = "customint6";
 
-    const MULTICHOICE_ANSWERLAYOUT = 'customint7';
+    const MULTICHOICE_ANSWERLAYOUT = "customint7";
 
     const MULTICHOICE_ANSWERLAYOUT_DEFAULT = 1;
 
     const MULTICHOICE_ANSWERLAYOUT_TWOCOLUMN = 2;
 
-    const AUDIOCHAT_STUDENT_SUBMISSION = 'customint8';
+    const AUDIOCHAT_STUDENT_SUBMISSION = "customint8";
 
-    const AUDIOCHAT_AUDIOAVATAR = 'customtext7';
+    const AUDIOCHAT_AUDIOAVATAR = "customtext7";
 
     const NATIVELANG_PREF = "poodll_nativelang";
 
     const KEYBOARD_LAYOUT_COMPACT = [
-        self::M_LANG_FRFR => 'à â æ ç é è ê ë î ï ô œ ù û ü ÿ',
-        self::M_LANG_FRCA => 'à â æ ç é è ê ë î ï ô œ ù û ü ÿ',
-        self::M_LANG_DEDE => 'ä ö ü ß',
-        self::M_LANG_DEAT => 'ä ö ü ß',
-        self::M_LANG_DECH => 'ä ö ü ß',
-        self::M_LANG_ESES => 'á é í ó ú ü ñ ¿ ¡',
-        self::M_LANG_ESUS => 'á é í ó ú ü ñ ¿ ¡',
-        self::M_LANG_ITIT => 'à è é ì ò ù',
-        self::M_LANG_PTPT => 'á â ã à ç é ê í ó ô õ ú',
-        self::M_LANG_PTBR => 'á â ã à ç é ê í ó ô õ ú',
-        self::M_LANG_DADK => 'æ ø å',
-        self::M_LANG_NONO => 'æ ø å',
-        self::M_LANG_SVSE => 'å ä ö',
-        self::M_LANG_FIFI => 'ä ö',
-        self::M_LANG_ISIS => 'á ð é í ó ú ý þ æ ö',
-        self::M_LANG_PLPL => 'ą ć ę ł ń ó ś ź ż',
-        self::M_LANG_CSCZ => 'á č ď é ě í ň ó ř š ť ú ů ý ž',
-        self::M_LANG_HUHU => 'á é í ó ö ő ú ü ű',
-        self::M_LANG_RORO => 'ă â î ș ț',
-        self::M_LANG_TRTR => 'ç ğ ı İ ö ş ü',
+        self::M_LANG_FRFR => "à â æ ç é è ê ë î ï ô œ ù û ü ÿ",
+        self::M_LANG_FRCA => "à â æ ç é è ê ë î ï ô œ ù û ü ÿ",
+        self::M_LANG_DEDE => "ä ö ü ß",
+        self::M_LANG_DEAT => "ä ö ü ß",
+        self::M_LANG_DECH => "ä ö ü ß",
+        self::M_LANG_ESES => "á é í ó ú ü ñ ¿ ¡",
+        self::M_LANG_ESUS => "á é í ó ú ü ñ ¿ ¡",
+        self::M_LANG_ITIT => "à è é ì ò ù",
+        self::M_LANG_PTPT => "á â ã à ç é ê í ó ô õ ú",
+        self::M_LANG_PTBR => "á â ã à ç é ê í ó ô õ ú",
+        self::M_LANG_DADK => "æ ø å",
+        self::M_LANG_NONO => "æ ø å",
+        self::M_LANG_SVSE => "å ä ö",
+        self::M_LANG_FIFI => "ä ö",
+        self::M_LANG_ISIS => "á ð é í ó ú ý þ æ ö",
+        self::M_LANG_PLPL => "ą ć ę ł ń ó ś ź ż",
+        self::M_LANG_CSCZ => "á č ď é ě í ň ó ř š ť ú ů ý ž",
+        self::M_LANG_HUHU => "á é í ó ö ő ú ü ű",
+        self::M_LANG_RORO => "ă â î ș ț",
+        self::M_LANG_TRTR => "ç ğ ı İ ö ş ü",
     ];
 }
