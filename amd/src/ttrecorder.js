@@ -66,7 +66,7 @@ define([
     is_streaming: false,
     using_msspeech: false,
     msspeech_instance: null,
-    using_customasr: false,
+    using_customasr: true,
     customasr_instance: null,
     customasrurl: null,
     customasrapikey: "",
@@ -92,6 +92,7 @@ define([
       //init media uploader
       log.debug("ttr uploader savemedia: " + this.savemedia);
       if (this.savemedia) {
+        log.debug("if savemedia-oki");
         log.debug("ttr uploader creating: ");
         that.uploader = mediauploader.clone();
         var uconfig = {};
@@ -118,6 +119,7 @@ define([
       this.using_msspeech = this.can_msspeech();
       this.using_customasr = this.can_customasr();
       if (this.using_msspeech) {
+        log.debug("if msspeech");
         var referencetext = opts["referencetext"];
         this.msspeech_instance = msspeech.clone();
         this.msspeech_instance.init(
@@ -128,6 +130,7 @@ define([
         );
       }
       if (this.using_customasr) {
+        log.debug("if custom asr");
         var customasrreferencetext = opts["referencetext"] || "";
         this.customasr_instance = creeasr.clone();
         this.customasr_instance.init(
@@ -211,7 +214,9 @@ define([
 
         //if we are not streaming then upload_transcribe (ie send to poodll servers)
         if (!that.is_streaming) {
+          log.debug("if streaming");
           if (that.using_customasr) {
+            log.debug("using_customasr if streaming");
             that.do_customasr(that.audio.blob, function (response) {
               if (response) {
                 that.gotMSResults(response);
@@ -219,7 +224,7 @@ define([
                 notification.alert(
                   "Information",
                   that.strings.speechnotrecognized,
-                  "OK",
+                  "OK-oki",
                 );
               }
               that.update_audio("isRecognizing", false);
@@ -261,7 +266,8 @@ define([
         browserRec.will_work_ok() &&
         !this.stt_guided &&
         !this.forcestreaming &&
-        !this.using_msspeech
+        !this.using_msspeech &&
+        !this.using_customasr
       ) {
         //Init browserrec
         log.debug("using browser rec");
@@ -353,6 +359,7 @@ define([
     },
 
     can_customasr: function () {
+      log.debug("can_customasr");
       return !!(this.customasrurl && this.speechtokentype === "customasr");
     },
 
@@ -362,6 +369,7 @@ define([
         this.msspeech_instance.set_reference_text(newprompt);
       }
       if (this.customasr_instance) {
+        log.debug("update_currentprompt customasr_instance");
         this.customasr_instance.set_reference_text(newprompt);
       }
     },
@@ -725,6 +733,7 @@ define([
     },
 
     do_customasr: function (blob, callback) {
+      log.debug("do_customasr");
       this.customasr_instance.recognize(blob, callback);
     },
   }; //end of return value
