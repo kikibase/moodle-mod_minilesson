@@ -66,7 +66,7 @@ define([
     is_streaming: false,
     using_msspeech: false,
     msspeech_instance: null,
-    using_customasr: true,
+    using_customasr: false,//was true for debuging incase it breaks find out
     customasr_instance: null,
     customasrurl: null,
     customasrapikey: "",
@@ -92,7 +92,6 @@ define([
       //init media uploader
       log.debug("ttr uploader savemedia: " + this.savemedia);
       if (this.savemedia) {
-        log.debug("if savemedia-oki");
         log.debug("ttr uploader creating: ");
         that.uploader = mediauploader.clone();
         var uconfig = {};
@@ -195,7 +194,7 @@ define([
         that.update_audio(newaudio);
 
         // If we have a blob and we need to upload it, do so
-        if (that.savemedia) {
+        if (that.savemedia & !using_customasr) {
           that.uploader.uploadBlob(that.audio.blob, "audio/wav");
           var message = {};
           message.type = "mediasaved";
@@ -224,7 +223,7 @@ define([
                 notification.alert(
                   "Information",
                   that.strings.speechnotrecognized,
-                  "OK-oki",
+                  "OK",
                 );
               }
               that.update_audio("isRecognizing", false);
